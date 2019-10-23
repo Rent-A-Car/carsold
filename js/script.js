@@ -12,22 +12,17 @@ var carsc = $('.tdata').length;
 });
 
 function addCarsFromJson(){
-var carsjson;
 var xhr = new XMLHttpRequest();
-
-// 2. Конфигурируем его: GET-запрос на URL 'phones.json'
-xhr.open('GET', 'data.json', false);
-
-// 3. Отсылаем запрос
+xhr.open('GET', 'https://cars.arendacg.ml/data.json', false);
 xhr.send();
 
-// 4. Если код ответа сервера не 200, то это ошибка
+
 if (xhr.status != 200) {
-  // обработать ошибку
-  alert( xhr.status + ': ' + xhr.statusText ); // пример вывода: 404: Not Found
+ 
+  alert( xhr.status + ': ' + xhr.statusText ); 
 } else {
   // вывести результат
-  carsjson =xhr.responseText; // responseText -- текст ответа.
+  var carsjson =xhr.responseText; 
   alert(carsjson);
 }
 

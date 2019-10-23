@@ -1,5 +1,6 @@
 $(document).ready(function()
 {
+alert("1");
 addCarsFromJson();
 var carsc = $('.tdata').length;
     $("#cars").change(function()

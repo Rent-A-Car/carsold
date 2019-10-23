@@ -27,6 +27,7 @@ if (xhr.status != 200) {
 } else {
   // вывести результат
   carsjson =xhr.responseText; // responseText -- текст ответа.
+  alert(carsjson);
 }
 
 

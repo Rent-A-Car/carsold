@@ -5,7 +5,7 @@ addCarsFromJson();
 var carsc = $('.tdata').length;
     $("#cars").change(function()
     {
-    
+    alert(this.value);
     
     });
 

@@ -14,7 +14,7 @@ $("#scars").append("<div class='tdata' id='"+scid+"'></div>");
 $("#"+scid).append("<div class='galery'> <img src='"+obj[x].img[0]+"'></img> </div>");
 /////  <div class="vehicle-price">$ 37.40 <span class="info">rent per day</span></div>
 
-$("#"+scid) append(" <div class='vehicle-price'>"+obj[x].details+"<span class='info'>"++"</span></div>");
+$("#"+scid).append(" <div class='vehicle-price'>"+obj[x].details.price+"<span class='info'>"+obj[x].details.rtype+"</span></div>");
 
 x = x+1;
 }

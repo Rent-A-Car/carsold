@@ -1,4 +1,4 @@
-function setCarsTable(div)
+function setCarsTable()
 {
   var obj = JSON.parse(jsonCarData);
 var x = 0;
@@ -35,7 +35,7 @@ function changeTC(value)
 
 $(document).ready(function ()
 {
-  setCarsTable("");
+  setCarsTable();
 
 
   var carsc = $('.tdata').length;

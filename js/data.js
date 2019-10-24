@@ -1,1 +1,1 @@
-var jsonCarData = "{test: 66}";
+var jsonCarData = '[{"img":["img/vehicle1.jpg"],"detiles":{"name":"Mercedes b200","price":"30€","rtype":"rent per day","Двери":"4","Трансмиссия":"auto","Климат контроль":"☑️"}},{"img":["img/vehicle1.jpg"],"detiles":{"name":"Mercedes A class","price":"15€","rtype":"/день","Двери":"4","Трансмиссия":"auto","Климат контроль":"❎"}}]'; 

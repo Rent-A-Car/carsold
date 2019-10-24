@@ -8,6 +8,10 @@ $("#Dcars").append("<option selected value='"+x.toString()+"'>"+obj[x].detiles.n
 }else{
 $("#Dcars").append("<option value='"+x.toString()+"'>"+obj[x].detiles.name+"</option>");
 };
+
+$("#scars").append("<div class='tdata' id='t-"+x.toString()+"'></div>");
+$("#t-"+x.toString).append("<div><img src='' /></div>");
+
 x = x+1;
 }
 

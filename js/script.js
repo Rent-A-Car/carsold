@@ -8,9 +8,13 @@ $("#Dcars").append("<option selected value='"+x.toString()+"'>"+obj[x].detiles.n
 }else{
 $("#Dcars").append("<option value='"+x.toString()+"'>"+obj[x].detiles.name+"</option>");
 };
+var scid = "t-"+ x.toString();
+$("#scars").append("<div class='tdata' id='"+scid+"'></div>");
+// цикл за фото
+$("#"+scid).append("<div class='galery'> <img src='"+obj[x].img[0]+"'></img> </div>");
+///////
 
-$("#scars").append("<div class='tdata' id='t-"+x.toString()+"'></div>");
-$("#t-"+x.toString).append("<div><img src='' /></div>");
+//$("#"+scid) append())
 
 x = x+1;
 }

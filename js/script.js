@@ -1,11 +1,19 @@
 function setCarsTable(div)
 {
   var obj = JSON.parse(jsonCarData);
-
+var x = 0;
+for (var i = 0; i < obj.length; i++){
+if (i==0){
+$("#Dcars").append("<option selected value='"+x.toString()+"'>"+obj[x].detiles.name+"</option>");
+}else{
+$("#Dcars").append("<option value='"+x.toString()+"'>"+obj[x].detiles.name+"</option>");
+};
+x = x+1;
+}
 
 
   var keys = [];
-  var x = 0;
+  x = 0;
   for (var k in obj[0].detiles)
   {
     if (x > 2)
@@ -15,7 +23,7 @@ function setCarsTable(div)
     x = x + 1
   };
 
-  $("#scars").append(keys);
+  //$("#scars").append(keys);
 };
 
 function changeTC(value)

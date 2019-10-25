@@ -58,10 +58,10 @@ table {
 .tdata-img {
   text-align: center;
 }
-.tdata-img img {
+/*.tdata-img img {
   display: inline-block;
 }
-
+*/
 
 
 @media (max-width: 1200px) {

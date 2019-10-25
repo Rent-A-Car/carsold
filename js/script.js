@@ -18,7 +18,13 @@ $("#"+scid).css("display", "none");
 };
 //
 // цикл за фото
-$("#"+scid).append("<div class='tdata-img fadeIn'> <img class='img-responsive' src='"+obj[x].img[0]+"'></img> </div>");
+var imgt = "";
+imgt= imgt + '<div class="mySlides"'+x+'><img class="img-responsive"  src='+obj[x].img[0]+' style="width:100%"></div>';
+
+
+
+
+$("#"+scid).append("<div class='tdata-img fadeIn'><div class='slideshow-container'> "+imgt+" </div></div>");
 //
 $("#"+scid).append(" <div class='tdata-price'>"+obj[x].details.price+"<span class='info'>"+obj[x].details.rtype+"</span></div>");
 $("#"+scid).append("<table id='"+scid+"t' class='table tdata-features '></table>");
@@ -56,6 +62,7 @@ function changeTC(value)
   $(scid).css("display", "block");
 
 };
+
 
 $(document).ready(function ()
 {

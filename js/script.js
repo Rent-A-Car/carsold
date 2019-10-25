@@ -12,9 +12,9 @@ var scid = "t-"+ x.toString();
 $("#scars").append("<div class='tdata' id='"+scid+"'></div>");
 // показ при першому записі
 if (x == 0){
-$("#"+scid).show();
+$("#"+scid).css("display", "block");
 }else{
-$("#"+scid).hide();
+$("#"+scid).css("display", "none");
 };
 //
 // цикл за фото
@@ -52,8 +52,8 @@ function changeTC(value)
 {
   var carsc = $('.tdata').length;
   var scid = "#t-"+value;
-  $(".tdata").hide();
-  $(scid).show();
+  $(".tdata").css("display", "none");
+  $(scid).css("display", "block");
 
 };
 

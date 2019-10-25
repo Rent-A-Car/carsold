@@ -10,34 +10,50 @@ $("#Dcars").append("<option value='"+x.toString()+"'>"+obj[x].details.name+"</op
 };
 var scid = "t-"+ x.toString();
 $("#scars").append("<div class='tdata' id='"+scid+"'></div>");
+// показ при першому записі
+if (x == 0){
+$("#"+scid).show();
+}else{
+$("#"+scid).hide();
+};
+//
 // цикл за фото
 $("#"+scid).append("<div class='galery'> <img src='"+obj[x].img[0]+"'></img> </div>");
-/////  <div class="vehicle-price">$ 37.40 <span class="info">rent per day</span></div>
+//
+$("#"+scid).append(" <div class='tdata-price'>"+obj[x].details.price+"<span class='info'>"+obj[x].details.rtype+"</span></div>");
+$("#"+scid).append("<table id='"+scid+"t' class='table tdata-features '></table>");
+  y = 0;
+  for (var k in obj[x].details)
+  {
+    if (y > 2)
+    {
+    $("#"+scid+"t").append("<tr><td>"+k+"</td><td>"+obj[x].details[k]+"</td></tr>");
+    }
+    y = y+ 1
+  };
+$("#"+scid).append("<a href='#' onclick='reserveFunction(\""+x+"\");' class='reserve-button'><span class='glyphicon glyphicon-calendar'></span> Reserve now</a>");
 
-$("#"+scid).append(" <div class='vehicle-price'>"+obj[x].details.price+"<span class='info'>"+obj[x].details.rtype+"</span></div>");
 
 x = x+1;
 }
 
 
-  var keys = [];
-  x = 0;
-  for (var k in obj[0].details)
-  {
-    if (x > 2)
-    {
-      keys.push(obj[0].details[k]);
-    }
-    x = x + 1
-  };
+  
 
-  //$("#scars").append(keys);
+//  $("#scars").append(keys);
 };
+function reserveFunction(car){
+alert(car);
+
+};
+
 
 function changeTC(value)
 {
-  alert(value);
-
+  var carsc = $('.tdata').length;
+  var scid = "#t-"+value;
+  $("#t-0").hide();
+  $(scid).show();
 
 };
 
@@ -46,7 +62,6 @@ $(document).ready(function ()
   setCarsTable();
 
 
-  var carsc = $('.tdata').length;
   $("#Dcars").change(function ()
   {
     changeTC(this.value);

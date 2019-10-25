@@ -1,0 +1,67 @@
+
+body {
+  font-family: 'Lato', sans-serif;
+  color: #716d6e;
+}
+
+/* button */
+.reserve-button {
+  background-color: #ffbf00;
+  color: #fff;
+  display: block;
+  height: 50px;
+  line-height: 51px;
+  font-size: 24px;
+  font-weight: 900;
+  padding: 0 15px;
+  box-shadow: 6px 6px 0 #efe9e9;
+  text-transform: uppercase;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+.reserve-button:hover {
+  background-color: #716d6e;
+}
+.reserve-button span {
+  margin-right: 7px;
+}
+/* */
+
+
+.tdata-price {
+  background-color: rgba(255, 191, 0, 0.4);
+  height: 53px;
+  line-height: 53px;
+  padding: 0 10px;
+  font-size: 24px;
+  font-weight: 900;
+}
+.tdata-price .info {
+  font-weight: normal;
+  font-size: 18px;
+}
+
+
+@media (max-width: 1200px) {
+
+  .tdata-price {
+    font-size: 20px;
+  }
+   .tdata-price {
+    font-size: 20px;
+  }
+   .tdata-price .info {
+    font-size: 16px;
+  }
+.table {
+    font-size: 12px;
+  }
+   .reserve-button {
+    font-size: 22px;
+  }
+   .reserve-button {
+    font-size: 22px;
+  }
+
+
+}

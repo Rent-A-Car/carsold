@@ -28,6 +28,19 @@ body {
 /* */
 
 
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  font-weight: normal;
+  font-size: 18px;
+}
+
 .tdata-price {
   background-color: rgba(255, 191, 0, 0.4);
   height: 53px;
@@ -40,6 +53,14 @@ body {
   font-weight: normal;
   font-size: 18px;
 }
+
+.tdata-img {
+  text-align: center;
+}
+.tdata-img img {
+  display: inline-block;
+}
+
 
 
 @media (max-width: 1200px) {

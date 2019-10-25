@@ -18,7 +18,7 @@ $("#"+scid).hide();
 };
 //
 // цикл за фото
-$("#"+scid).append("<div class='galery'> <img src='"+obj[x].img[0]+"'></img> </div>");
+$("#"+scid).append("<div class='tdata-img fadeIn'> <img class='img-responsive' src='"+obj[x].img[0]+"'></img> </div>");
 //
 $("#"+scid).append(" <div class='tdata-price'>"+obj[x].details.price+"<span class='info'>"+obj[x].details.rtype+"</span></div>");
 $("#"+scid).append("<table id='"+scid+"t' class='table tdata-features '></table>");
@@ -52,7 +52,7 @@ function changeTC(value)
 {
   var carsc = $('.tdata').length;
   var scid = "#t-"+value;
-  $("#t-0").hide();
+  $(".tdata").hide();
   $(scid).show();
 
 };

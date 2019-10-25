@@ -19,12 +19,15 @@ $("#"+scid).css("display", "none");
 //
 // цикл за фото
 var imgt = "";
-imgt= imgt + '<div class="mySlides"'+x+'><img class="img-responsive"  src='+obj[x].img[0]+' style="width:100%"></div>';
+for (var ii = 0; ii < obj[x].img.length; ii++){
+if (ii==0){
+imgt= imgt + '<div class="item active"><img class="img-responsive" src="'+obj[x].img[ii]+'" alt="..."></div>';
+}else {
+imgt= imgt + '<div class="item"><img class="img-responsive" src="'+obj[x].img[ii]+'" alt="..."></div>';
+}
+};
 
-
-
-
-$("#"+scid).append("<div class='tdata-img fadeIn'><div class='slideshow-container'> "+imgt+" </div></div>");
+$("#"+scid).append('<div class="tdata-img fadeIn"> <div id="carousel" class="carousel slide" data-ride="carousel" style="display: inline-block;"><div class="carousel-inner">'+imgt+'</div><a class="left carousel-control" href="#carousel" role="button" data-slide="prev"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span><span class="sr-only">Предыдущий</span></a><a class="right carousel-control" href="#carousel" role="button" data-slide="next"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><span class="sr-only">Следующий</span></a></div>');
 //
 $("#"+scid).append(" <div class='tdata-price'>"+obj[x].details.price+"<span class='info'>"+obj[x].details.rtype+"</span></div>");
 $("#"+scid).append("<table id='"+scid+"t' class='table tdata-features '></table>");
@@ -60,14 +63,16 @@ function changeTC(value)
   var scid = "#t-"+value;
   $(".tdata").css("display", "none");
   $(scid).css("display", "block");
-
+ 
 };
+
+
+
 
 
 $(document).ready(function ()
 {
   setCarsTable();
-
 
   $("#Dcars").change(function ()
   {

@@ -29,9 +29,16 @@ body {
 
 
 
+/*custom select */
+
+.pselect{
+margin-top: 7px;
+}
 
 
 
+
+/* */
 table {
   border-collapse: collapse;
   width: 100%;

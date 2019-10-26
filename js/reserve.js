@@ -28,6 +28,7 @@ $(document).ready(function ()
   obj=JSON.parse(jsonCarData);
   var b = obj.length;
   var a = GetURLParameter("carID");
-  carID = parseInt(a, 10); % b;
-  alert(carID);
+  //carID = parseInt(a, 10); % b;
+  alert(b);
+  alert(a);
 });

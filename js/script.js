@@ -52,7 +52,15 @@ x = x+1;
 //  $("#scars").append(keys);
 };
 function reserveFunction(car){
-alert(car);
+//alert(car); ?chat_id=415047826&text=
+$.post("https://api.telegram.org/bot818541918:AAGVXFGPu-iU7DCzTZJJ7I9yDmCSQKESGFQ/sendMessage",{
+      chat_id: "415047826",
+      text: car
+    }, function(data, status){
+    alert("Data: " + data + "\nStatus: " + status);
+  });
+
+
 
 };
 

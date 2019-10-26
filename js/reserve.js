@@ -1,7 +1,7 @@
 var carID;
 var obj;
 
-function GetURLParameter(sParam)
+function GetUP(sParam)
 {
     var sPageURL = window.location.search.substring(1);
     var sURLVariables = sPageURL.split('&');
@@ -27,8 +27,7 @@ $(document).ready(function ()
 {
   obj=JSON.parse(jsonCarData);
   var b = obj.length;
-  var a = GetURLParameter("carID");
+ // var a = GetURLParameter("carID");
   //carID = parseInt(a, 10); % b;
-  alert(b);
-  alert(a);
+ $("#text").text=b;
 });

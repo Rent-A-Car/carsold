@@ -55,7 +55,7 @@ function reserveFunction(car){
 var a = Math.floor(Math.random() * 21);
 var b = $(".tdata").length;
 var id = a*b+car;
-window.location.assign("https://cars.arendacg.ml/reserve?car="+id.toString());
+window.location.assign("https://cars.arendacg.ml/reserve?carID="+id.toString());
 
 };
 

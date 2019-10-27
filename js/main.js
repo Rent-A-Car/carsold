@@ -57,8 +57,8 @@ var a = 10+car;
 var b = $(".tdata").length;
 b=parseInt(b,10);
 var id = ((a+b)**2)+b;
-alert(id);
-//window.location.assign("https://cars.arendacg.ml/reserve?carID="+id.toString());
+//alert(id);
+window.location.assign("https://cars.arendacg.ml/reserve?carID="+id.toString());
 
 };
 

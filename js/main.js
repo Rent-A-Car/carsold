@@ -52,10 +52,13 @@ x = x+1;
 //  $("#scars").append(keys);
 };
 function reserveFunction(car){
-var a = Math.floor(Math.random() * 21);
+car=parseInt(car,10);
+var a = 10+car;
 var b = $(".tdata").length;
-var id = a*b+car;
-window.location.assign("https://cars.arendacg.ml/reserve?carID="+id.toString());
+b=parseInt(b,10);
+var id = ((a+b)**2)+b;
+alert(id);
+//window.location.assign("https://cars.arendacg.ml/reserve?carID="+id.toString());
 
 };
 

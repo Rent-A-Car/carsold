@@ -11,12 +11,12 @@ $(document).ready(function ()
   if(urlParams.has('carID')){
   var a = parseInt(urlParams.get('carID'), 10);
   b=parseInt(b,10);
-  var carID = a%b;
+  var carID = ((Math.sqrt(a-b)-b)-10);
   if(carID <= b){
   
+  $("#text").text(carID);
   
-  
-  sendTG(carID);
+/*sendTG(carID);*/
   
   
   

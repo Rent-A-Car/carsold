@@ -40,7 +40,7 @@ $("#"+scid).append("<table id='"+scid+"t' class='table tdata-features '></table>
     }
     y = y+ 1
   };
-$("#"+scid).append("<a href='#' onclick='reserveFunction(\""+x+"\");' class='reserve-button'><span class='glyphicon glyphicon-calendar'></span> ЗАРЕЗЕРВИРОВАТЬ СЕЙЧАС</a>");
+$("#"+scid).append("<a href='#' onclick='reserveFunction(\""+x+"\");' class='reserve-button'><span class='glyphicon glyphicon-calendar'></span> ЗАРЕЗЕРВИ СЕЙЧАС</a>");
 
 
 x = x+1;
@@ -58,7 +58,7 @@ var b = $(".tdata").length;
 b=parseInt(b,10);
 var id = ((a+b)**2)+b;
 //alert(id);
-window.location.assign("https://cars.arendacg.ml/reserve?carID="+id.toString());
+window.location.assign(window.location.origin+"/reserve?carID="+id.toString());
 
 };
 

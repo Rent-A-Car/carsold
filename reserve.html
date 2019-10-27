@@ -20,6 +20,8 @@
   <title>Аренда автомобилей</title>
   <link href="css/reserve.css" type="text/css" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.0/js/bootstrap.min.js"></script>
 
 <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -30,9 +32,17 @@
 
 
 <section id="rsrv"  class="container">
+    <div class="col-md-3 fadeInUp">
+<form>
+<p> <label>период с</label>
+<input type="text" id="datepickerF"></p>
+ 
+<p> <label>период до</label>
+<input type="text" id="datepickerT"></p>
 <p id="text"></p>
+</div>
+</form>
   </section>
-
 
 
  <script src="js/data.js"></script>

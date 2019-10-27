@@ -40,22 +40,24 @@
     <input type="text" class="form-control" id="datepickerF" placeholder="dd.mm.yy">
     <label for="datepickerT">до</label>
     <input type="text" class="form-control" id="datepickerT" placeholder="dd.mm.yy">
+    <div style="display: none;" class="invalid-feedback">Укажите период</div>
   </div>
   
 <div class="form-group">
       <label class="mr-sm-2" for="slsity">Город</label>
-      <select class="form-control " id="slsity" is-invalid required>
+      <select class="form-control " id="slsity" required>
         <option selected>Выбирите...</option>
         <option value="1">Херцег-нови</option>
         <option disabled value="2">Тиват</option>
         <option disabled value="3">Котор</option>
       </select>
-      <div class="invalid-feedback">Укажите город</div>
+      <div style="display: none;" class="invalid-feedback">Укажите город</div>
     </div>
 
 <div class="form-group">
     <label for="fio">Ф.И.О</label>
     <input type="text" class="form-control" id="fio" placeholder="Александр Сергеевич Пушкин">
+    <div style="display: none;" class="invalid-feedback">Укажите Ф.И.О</div>
   </div>
 
 </form>

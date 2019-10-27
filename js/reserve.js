@@ -6,8 +6,8 @@ var _0x5b66=['esOOwonCuAHDkGpjEQ==','P8K0wqYzwrjClMO6bsOqXwTCvMK4wrxn','KsKpwqco
 
 function datap(){
 $.datepicker.regional.ru = {	closeText: "Закрыть",	prevText: "&#x3C;Пред",	nextText: "След&#x3E;",	currentText: "Сегодня",	monthNames: [ "Январь","Февраль","Март","Апрель","Май","Июнь",	"Июль","Август","Сентябрь","Октябрь","Ноябрь","Декабрь" ],	monthNamesShort: [ "Янв","Фев","Мар","Апр","Май","Июн",	"Июл","Авг","Сен","Окт","Ноя","Дек" ],	dayNames: [ "воскресенье","понедельник","вторник","среда","четверг","пятница","суббота" ],	dayNamesShort: [ "вск","пнд","втр","срд","чтв","птн","сбт" ],	dayNamesMin: [ "Вс","Пн","Вт","Ср","Чт","Пт","Сб" ],	weekHeader: "Нед",	dateFormat: "dd.mm.yy",firstDay: 1,isRTL: false,showMonthAfterYear: false,yearSuffix: "" };
-$( "#datepickerF" ).datepicker({minDate: new Date()},$.datepicker.regional["ru"]);
-$( "#datepickerT" ).datepicker({minDate: "+2d"},$.datepicker.regional["ru"]);
+$( "#datepickerF" ).datepicker({minDate: "+1d"},$.datepicker.regional["ru"]);
+$( "#datepickerT" ).datepicker({minDate: "+3d"},$.datepicker.regional["ru"]);
 };
 
 
@@ -20,28 +20,47 @@ $( "#datepickerT" ).datepicker({minDate: "+2d"},$.datepicker.regional["ru"]);
 $(document).ready(function ()
 {
   var obj=JSON.parse(jsonCarData);
-  datap();
-  
-  
-  
-  
+
   var b = obj.length;
   var urlParams = new URLSearchParams(window.location.search);
-  if(urlParams.has('carID')){
+  var x = 0;
+for (var i = 0; i < obj.length; i++){
+if(urlParams.has('carID')){
   var a = parseInt(urlParams.get('carID'), 10);
   b=parseInt(b,10);
   var carID = ((Math.sqrt(a-b)-b)-10);
   if(carID <= b){
   
-  $("#text").text(carID);
+  if (i==carID){
+$("#Dcars").append("<option selected value='"+x.toString()+"'>"+obj[x].details.name+"</option>");
+}else{
+$("#Dcars").append("<option value='"+x.toString()+"'>"+obj[x].details.name+"</option>");
+};
+  }else{
+  if (i==0){
+$("#Dcars").append("<option selected value='"+x.toString()+"'>"+obj[x].details.name+"</option>");
+}else{
+$("#Dcars").append("<option value='"+x.toString()+"'>"+obj[x].details.name+"</option>");
+};
   
-/*sendTG(carID);*/
+  }
+  }else{if (i==0){
+$("#Dcars").append("<option selected value='"+x.toString()+"'>"+obj[x].details.name+"</option>");
+}else{
+$("#Dcars").append("<option value='"+x.toString()+"'>"+obj[x].details.name+"</option>");
+};
+  };
+x= x+1;
+};
+  
+  
+ datap();
   
   
   
   
   
   
-  }};
+  
   
 });

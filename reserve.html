@@ -32,17 +32,34 @@
 
 
 <section id="rsrv"  class="container">
-    <div class="col-md-3 fadeInUp">
+    <div style="margin-top: 10px;" class="col-md-3 fadeInUp">
 <form>
-<p> <label>период с</label>
-<input type="text" id="datepickerF"></p>
- 
-<p> <label>период до</label>
-<input type="text" id="datepickerT"></p>
-<p id="text"></p>
-</div>
+<p class="pselect" ><select class="form-control" id='Dcars'></select></p>
+<div class="form-group">
+    <label for="datepickerF">Период с</label>
+    <input type="text" class="form-control" id="datepickerF" placeholder="dd.mm.yy">
+    <label for="datepickerT">до</label>
+    <input type="text" class="form-control" id="datepickerT" placeholder="dd.mm.yy">
+  </div>
+  
+<div class="form-group">
+      <label class="mr-sm-2" for="slsity">Город</label>
+      <select class="form-control " id="slsity">
+        <option selected>Выбирите...</option>
+        <option value="1">Херцег-нови</option>
+        <option disabled value="2">Тиват</option>
+        <option disabled value="3">Котор</option>
+      </select>
+    </div>
+
+<div class="form-group">
+    <label for="fio">Ф.И.О</label>
+    <input type="text" class="form-control" id="fio" placeholder="Александр Сергеевич Пушкин">
+  </div>
+
 </form>
-  </section>
+</div>
+</section>
 
 
  <script src="js/data.js"></script>

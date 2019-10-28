@@ -57,10 +57,25 @@ x= x+1;
  datap();
   
   
-  
-  
-  
-  
-  
-  
 });
+
+
+
+function TlOrEm(id){
+  if (id==0){
+    $("#TelLbl").hide();
+    $("#TelA").show();
+    $("#PostLbl").show();
+    $("#PostA").hide();
+    $("#contact").attr("type","email").attr("placeholder","Aleksandar@gmail.com");
+    
+  }else if(id==1){
+    $("#PostLbl").hide();
+    $("#PostA").show();
+    $("#TelLbl").show();
+    $("#TelA").hide();
+    
+    $("#contact").attr("type","tel").attr("placeholder","+123 456-7890");
+  }
+  
+};

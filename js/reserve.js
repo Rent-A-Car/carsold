@@ -67,7 +67,7 @@ function formAnk(){
     event.preventDefault();
     var urldata= $("#FormAnketa").serialize();
     var data = new URLSearchParams(urldata);
-    sendTG(data.get("fio"));
+    sendTG(encodeURI(urldata));
 });
   
 };

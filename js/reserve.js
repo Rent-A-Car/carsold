@@ -55,27 +55,39 @@ x= x+1;
   
   
  datap();
-  
+
+ formAnk();
+
   
 });
 
 
-
+function formAnk(){
+    $("#FormAnketa").on( "submit", function (event){
+    event.preventDefault();
+    var urldata= $("#FormAnketa").serialize();
+    var data = new URLSearchParams(urldata);
+    sendTG(data.get("fio"));
+});
+  
+};
 function TlOrEm(id){
   if (id==0){
     $("#TelLbl").hide();
     $("#TelA").show();
     $("#PostLbl").show();
     $("#PostA").hide();
+    $("#contact").val("");
     $("#contact").attr("type","email").attr("placeholder","aleksandar@gmail.com");
+  
     
   }else if(id==1){
     $("#PostLbl").hide();
     $("#PostA").show();
     $("#TelLbl").show();
     $("#TelA").hide();
-    
+    alert("Обязательное наличие Viber или Whatsapp");
+    $("#contact").val("");
     $("#contact").attr("type","tel").attr("placeholder","+123 456-7890");
-  }
-  
-};
+    
+  }};

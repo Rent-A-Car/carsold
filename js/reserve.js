@@ -67,7 +67,7 @@ function TlOrEm(id){
     $("#TelA").show();
     $("#PostLbl").show();
     $("#PostA").hide();
-    $("#contact").attr("type","email").attr("placeholder","Aleksandar@gmail.com");
+    $("#contact").attr("type","email").attr("placeholder","aleksandar@gmail.com");
     
   }else if(id==1){
     $("#PostLbl").hide();

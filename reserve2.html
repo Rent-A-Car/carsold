@@ -31,24 +31,26 @@
 
 
 <section id="rsrv"  class="container">
-<div class="frm col-md-3 fadeInUp">
-<p class="pselect" > <label for="Dcars">авто</label>
+    <div style="margin-top: 10px;" class="col-md-3 fadeInUp">
+<form>
+<p class="pselect" >
+ <label for="Dcars">авто</label>
 <select class="form-control" id='Dcars'></select></p>
 <div class="form-group">
     <label for="datepickerF">Период с</label>
-    <input type="text" class="date_picker form-control" id="datepickerF" placeholder="dd/mm/yy">
+    <input type="text" class="form-control" id="datepickerF" placeholder="dd.mm.yy">
     <label for="datepickerT">до</label>
-    <input type="text" class="date_picker form-control" id="datepickerT" placeholder="dd/mm/yy">
+    <input type="text" class="form-control" id="datepickerT" placeholder="dd.mm.yy">
     <div style="display: none;" class="invalid-feedback">Укажите период</div>
   </div>
   
 <div class="form-group">
-      <label  for="slsity">Город</label>
+      <label class="mr-sm-2" for="slsity">Город</label>
       <select class="form-control " id="slsity" required>
-       <!-- <option selected>Выбирите...</option> -->
+        <option selected>Выбирите...</option>
         <option value="1">Херцег-нови</option>
-        <!-- <option disabled value="2">Тиват</option>
-        <option disabled value="3">Котор</option> -->
+        <option disabled value="2">Тиват</option>
+        <option disabled value="3">Котор</option>
       </select>
       <div style="display: none;" class="invalid-feedback">Укажите город</div>
     </div>
@@ -59,7 +61,7 @@
     <div style="display: none;" class="invalid-feedback">Укажите Ф.И.О</div>
   </div>
 
-
+</form>
 </div>
 </section>
 

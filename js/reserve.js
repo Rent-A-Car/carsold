@@ -56,18 +56,28 @@ x= x+1;
   
  datap();
 
- formAnk();
+ formAnk(obj);
 
   
 });
 
 
-function formAnk(){
+function formAnk(obj){
     $("#FormAnketa").on( "submit", function (event){
     event.preventDefault();
     var urldata= $("#FormAnketa").serialize();
     var data = new URLSearchParams(urldata);
-    sendTG(encodeURI(urldata));
+    var str = "**Нове замовлення**\n";
+    var car = decodeURI(data.get("car"));
+    var datef = decodeURI(data.get("datef"));
+    var datet = decodeURI(data.get("datet"));
+    var sity = decodeURI(data.get("sity"));
+    var fio = decodeURI(data.get("fio"));
+    var msg = decodeURI(data.get("msg"));
+    var contact = decodeURI(data.get("contact"));
+    str = str+"Від "+datef+" до "+datet+"\nАвто: "+obj[parseInt(car,10)].details.name+"\nП.І.Б: "+fio+"\n"+contact+"\nДодаткове повідомлення:\n\n"+msg;
+    sendTG(encodeURI(str));
+    alert(str);
 });
   
 };

@@ -58,7 +58,7 @@ var b = $(".tdata").length;
 b=parseInt(b,10);
 var id = ((a+b)**2)+b;
 //alert(id);
-window.location.assign(window.location.origin+"/reserve.html?carID="+id.toString());
+window.location.assign(window.location.origin+"/reserve?carID="+id.toString());
 
 };
 

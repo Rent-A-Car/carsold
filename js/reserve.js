@@ -79,7 +79,7 @@ function formAnk(obj){
     event.preventDefault();
     var urldata= $("#FormAnketa").serialize();
     var data = new URLSearchParams(urldata);
-    var str = "**Нове замовлення**\n";
+    var str = ".........Нове замовлення.........\n";
     var car = decodeURI(data.get("car"));
     var datef = decodeURI(data.get("datef"));
     var datet = decodeURI(data.get("datet"));
@@ -87,11 +87,7 @@ function formAnk(obj){
     var fio = decodeURI(data.get("fio"));
     var msg = decodeURI(data.get("msg"));
     var contact = decodeURI(data.get("contact"));
-    if($("#contact").prop("type")=="email"){
    contact="`"+contact+"`";
-  }else{
-   contact="`"+contact+"`";
-  };
   if(msg == ""){
    var dodtk = "";
   }else{

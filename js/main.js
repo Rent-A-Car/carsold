@@ -14,13 +14,13 @@ $("#scars").append("<div class='tdata' id='"+scid+"'></div>");
 if (x == 0){
 $("#"+scid).show();
 }else{
-$("#"+scid).hide();
+$("#"+scid).hide(); //hide
 };
 //
 // цикл за фото
 var imgt = "";
 for (var ii = 0; ii < obj[x].img[0]; ii++){
-      var patern = obj[x].img[1];
+    var patern = obj[x].img[1];
 if (ii==0){
 imgt= imgt + '<div class="item active"><img class="img-responsive" src="'+patern+ii+'.'+obj[x].img[2]+'" alt="..."></div>';
 }else {
@@ -28,7 +28,7 @@ imgt= imgt + '<div class="item"><img class="img-responsive" src="'+patern+ii+'.'
 }
 };
 
-$("#"+scid).append('<div class="tdata-img fadeIn"> <div id="carousel" class="carousel slide" data-ride="carousel" ><div class="carousel-inner">'+imgt+'</div><a class="left carousel-control" href="#carousel" role="button" data-slide="prev"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span><span class="sr-only">Предыдущий</span></a><a class="right carousel-control" href="#carousel" role="button" data-slide="next"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><span class="sr-only">Следующий</span></a></div>');
+$("#"+scid).append('<div class="tdata-img fadeIn"> <div id="carousel'+x+'" class="carousel slide" data-ride="carousel" ><div class="carousel-inner">'+imgt+'</div><a class="left carousel-control" href="#carousel'+x+'" role="button" data-slide="prev"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span><span class="sr-only">Предыдущий</span></a><a class="right carousel-control" href="#carousel'+x+'" role="button" data-slide="next"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><span class="sr-only">Следующий</span></a></div>');
 //
 $("#"+scid).append(" <div class='tdata-price'>"+obj[x].details.price+"<span class='info'>"+obj[x].details.rtype+"</span></div>");
 $("#"+scid).append("<table id='"+scid+"t' class='table tdata-features '></table>");

@@ -79,6 +79,7 @@ table {
 }
 .tdata-img img {
   display: inline-block;
+  width: 100%;
 }
 
 

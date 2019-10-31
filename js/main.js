@@ -19,9 +19,10 @@ $("#"+scid).hide();
 //
 // цикл за фото
 var imgt = "";
-for (var ii = 0; ii < obj[x].img.length; ii++){
+for (var ii = 0; ii < obj[x].img[0]; ii++){
+      var patern = obj[x].img[1];
 if (ii==0){
-imgt= imgt + '<div class="item active"><img class="img-responsive" src="'+obj[x].img[ii]+'" alt="..."></div>';
+imgt= imgt + '<div class="item active"><img class="img-responsive" src="'+patern+ii+'.'+obj[x].img[2]+'" alt="..."></div>';
 }else {
 imgt= imgt + '<div class="item"><img class="img-responsive" src="'+obj[x].img[ii]+'" alt="'+obj[x].details.name+'"></div>';
 }

@@ -24,7 +24,7 @@ for (var ii = 0; ii < obj[x].img[0]; ii++){
 if (ii==0){
 imgt= imgt + '<div class="item active"><img class="img-responsive" src="'+patern+ii+'.'+obj[x].img[2]+'" alt="..."></div>';
 }else {
-imgt= imgt + '<div class="item"><img class="img-responsive" src="'+obj[x].img[ii]+'" alt="'+obj[x].details.name+'"></div>';
+imgt= imgt + '<div class="item"><img class="img-responsive" src="'+patern+ii+'.'+obj[x].img[2]+'" alt="'+obj[x].details.name+'"></div>';
 }
 };
 

@@ -77,10 +77,10 @@ table {
 .tdata-img {
   text-align: center;
 }
-/*.tdata-img img {
-  display: block;
+.tdata-img img {
+  display: inline-block;
 }
-*/
+
 
 
 @media only screen and (min-width: 1224px) {

@@ -34,11 +34,19 @@ body {
 
 .pselect{
 margin-top: 10px;
+ margin-left: auto;
+ margin-right: auto;
+ padding-left: 15px;
+ padding-right: 15px;
 }
 
 
 
-/* */
+/**/
+
+
+
+
 table {
   border-collapse: collapse;
   width: 100%;
@@ -70,12 +78,12 @@ table {
   text-align: center;
 }
 /*.tdata-img img {
-  display: inline-block;
+  display: block;
 }
 */
 
 
-@media (max-width: 1200px) {
+@media only screen and (min-width: 1224px) {
 
   .tdata-price {
     font-size: 20px;

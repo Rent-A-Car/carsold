@@ -22,7 +22,7 @@ var imgt = "";
 for (var ii = 0; ii < obj[x].img[0]; ii++){
     var patern = obj[x].img[1];
 if (ii==0){
-imgt= imgt + '<div class="item active"><img class="img-responsive" src="'+patern+ii+'.'+obj[x].img[2]+'" alt="'+obj[x].details.name+'"></div>';
+imgt= imgt + '<div style="width:100%;" class="item active"><img class="img-responsive" src="'+patern+ii+'.'+obj[x].img[2]+'" alt="'+obj[x].details.name+'"></div>';
 }else {
 imgt= imgt + '<div class="item"><img class="img-responsive" src="'+patern+ii+'.'+obj[x].img[2]+'" alt="'+obj[x].details.name+'"></div>';
 }

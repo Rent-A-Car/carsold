@@ -78,7 +78,7 @@ table {
   text-align: center;
 }
 .tdata-img img {
-  display: inline-block;
+  display: block;
   width: 100%;
 }
 

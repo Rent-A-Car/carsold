@@ -1,15 +1,19 @@
 function sendTG_N(data,status){
  if(status=="success"){
   
+  //
+  
   Swal.fire({
 title: 'Спасибо',
 type: 'success',
 html:
 'С вами свяжутся в ближайшее время<br>' +
 'конт.тел <a href="tel:+38268555972">+38268555972</a>',
-   footer: '<a href="viber://chat/?number=38268555972"><img src="img/viber.svg" alt="Viber" style="width:42px;height:42px;border:0"></a>'
+   footer: '<a href="viber://chat/?number=38268555972"><img class="cnet" src="img/viber.svg" alt="Viber"></a><a href="https://www.facebook.com/montenegroarenda/"><img class="cnet" src="img/facebook.svg" alt="Facebook"></a><a href="whatsapp://send/?phone=38268555972"><img src="img/whatsapp.svg" alt="Whatsapp" class="cnet"></a>'
 })
   
+  
+  //
   
   
 //alert("Спасибо\nС вами свяжутся в ближайшее время\nконт.тел +38268555972");
@@ -82,6 +86,8 @@ x= x+1;
 
  formAnk(obj);
 
+ 
+  
   
 });
 
@@ -107,8 +113,8 @@ function formAnk(obj){
    var dodtk = "\nДодаткове повідомлення:\n\n"+msg;
   }
     str = str+"Від "+datef+" до "+datet+"\nв "+sity+"\nАвто: "+obj[parseInt(car,10)].details.name+"\nП.І.Б: "+fio+"\n"+contact+dodtk;
-    //sendTG(str);
-    sendTG_N("","success");
+    sendTG(str);
+   // sendTG_N("","success");
 });
   
 };

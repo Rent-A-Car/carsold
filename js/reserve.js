@@ -1,7 +1,19 @@
 function sendTG_N(data,status){
  if(status=="success"){
-alert("Спасибо\nС вами свяжутся в ближайшее время\nконт.тел +38268555972");
-  window.location.replace(window.location.hostname);
+  
+  Swal.fire({
+title: 'Спасибо',
+type: 'success',
+html:
+'С вами свяжутся в ближайшее время<br>' +
+'конт.тел <a href="tel:+38268555972">+38268555972</a>',
+   footer: '<a href="viber://chat/?number=38268555972"><img src="img/viber.svg" alt="Viber" style="width:42px;height:42px;border:0"></a>'
+})
+  
+  
+  
+//alert("Спасибо\nС вами свяжутся в ближайшее время\nконт.тел +38268555972");
+  window.location.href("https://"+window.location.hostname);
  }else{
   alert("error "+status+"\nПожалуйста свяжитесь с администрацией +38268555972(Viber,WhatsApp)");
  }
@@ -95,8 +107,8 @@ function formAnk(obj){
    var dodtk = "\nДодаткове повідомлення:\n\n"+msg;
   }
     str = str+"Від "+datef+" до "+datet+"\nв "+sity+"\nАвто: "+obj[parseInt(car,10)].details.name+"\nП.І.Б: "+fio+"\n"+contact+dodtk;
-    sendTG(str);
-    //alert(str);
+    //sendTG(str);
+    sendTG_N("","success");
 });
   
 };
@@ -115,7 +127,10 @@ function TlOrEm(id){
     $("#PostA").show();
     $("#TelLbl").show();
     $("#TelA").hide();
-    alert("Обязательное наличие Viber или Whatsapp");
+Swal.fire({
+type: 'info',
+title: 'Обязательное наличие Viber или Whatsapp'
+})
     $("#contact").val("");
     $("#contact").attr("type","tel").attr("placeholder","+123 456-7890");
     

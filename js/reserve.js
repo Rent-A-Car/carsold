@@ -12,6 +12,7 @@ html:
    footer: '<a href="viber://chat/?number=38268555972"><img class="cnet" src="img/viber.svg" alt="Viber"></a><a href="https://www.facebook.com/montenegroarenda/"><img class="cnet" src="img/facebook.svg" alt="Facebook"></a><a href="whatsapp://send/?phone=38268555972"><img src="img/whatsapp.svg" alt="Whatsapp" class="cnet"></a>'
 })
   
+  
   //
   
   
@@ -23,26 +24,18 @@ html:
  
 };
 
-function sendTG(text){
+/*function sendTG(text){
   $.get("https://gornostay25.pythonanywhere.com/group",{text: text} ,function(data, status){
-    Swal.fire({
-title: 'Спасибо',
-type: 'success',
-html:
-'С Вами свяжутся в ближайшее время<br>' +
-'конт.тел <a href="tel:+38268555972">+38268555972</a>',
-   footer: '<a href="viber://chat/?number=38268555972"><img class="cnet" src="img/viber.svg" alt="Viber"></a><a href="https://www.facebook.com/montenegroarenda/"><img class="cnet" src="img/facebook.svg" alt="Facebook"></a><a href="whatsapp://send/?phone=38268555972"><img src="img/whatsapp.svg" alt="Whatsapp" class="cnet"></a>'
-})
-  //sendTG_N(data,status);
+    sendTG_N(data,status);
   });
 }
-/*
+*/
 function sendTG(text){
   $.get("https://api.telegram.org/bot818541918:AAGVXFGPu-iU7DCzTZJJ7I9yDmCSQKESGFQ/sendMessage",{chat_id: "-257808146",text: text,parse_mode:"Markdown"} ,function(data, status){
     sendTG_N(data,status);
   });
 }
-*/
+
 function datap(){
 $.datepicker.regional.ru = {	closeText: "Закрыть",	prevText: "&#x3C;Пред",	nextText: "След&#x3E;",	currentText: "Сегодня",	monthNames: [ "Январь","Февраль","Март","Апрель","Май","Июнь",	"Июль","Август","Сентябрь","Октябрь","Ноябрь","Декабрь" ],	monthNamesShort: [ "Янв","Фев","Мар","Апр","Май","Июн",	"Июл","Авг","Сен","Окт","Ноя","Дек" ],	dayNames: [ "воскресенье","понедельник","вторник","среда","четверг","пятница","суббота" ],	dayNamesShort: [ "вск","пнд","втр","срд","чтв","птн","сбт" ],	dayNamesMin: [ "Вс","Пн","Вт","Ср","Чт","Пт","Сб" ],	weekHeader: "Нед",	dateFormat: "dd.mm.yy",firstDay: 1,isRTL: false,showMonthAfterYear: false,yearSuffix: "" };
 $( "#datepickerF" ).mask('00/00/0000');

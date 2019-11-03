@@ -25,17 +25,17 @@
 
 
   <title>Аренда автомобилей</title>
- <link href="https://arendacg.ml/css/pre.css" type="text/css" rel="stylesheet">
-  <link href="css/main.css" type="text/css" rel="stylesheet">
+   <link href="css/main.css" type="text/css" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 
 <link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/pre.css" type="text/css" rel="stylesheet">
 
  </head>
  <body>  
-  
-  <div class="loading-window">
+ <div style="height:100%;width:100%"class="pbody">
+  <div id="prel" class="loading-window">
 <div class="car">
 <div class="strike"></div>
 <div class="strike strike2"></div>
@@ -54,17 +54,14 @@
 <span>Loading</span><span class = "dots">...</span>
 </div>
 </div>
+ </div>
   
   
-  
-  
-  
-  
-  
+  <div class="body"style="display:none" id="cont">
   <header><p class="pselect" >
  <select class="form-control" id='Dcars'></select></p></header>
 <section id="scars"  class="container">
-   </section>
+   </section></div>
  <script src="js/data.js"></script>
   <script src="js/main.js"></script>
  </body>

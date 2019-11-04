@@ -75,8 +75,9 @@ function changeTC(value)
 
 function offpreloader(secs){
   if (secs >= 1) { 
-     $("#prel").hide();
-  $("#cont").show(); 
+    $("body").css('background-color', 'white');
+    $("#prel").hide();
+    $("#cont").show(); 
    
   } else { setTimeout(function(){offpreloader(secs+1);},1000);  }
 }

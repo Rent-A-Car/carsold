@@ -1,3 +1,13 @@
+function langFilter(str){
+  
+  return str;
+}
+
+
+
+
+
+
 function setCarsTable()
 {
   var obj = JSON.parse(jsonCarData);
@@ -37,7 +47,7 @@ $("#"+scid).append("<table id='"+scid+"t' class='table tdata-features '></table>
   {
     if (y > 2)
     {
-    $("#"+scid+"t").append("<tr><td>"+k+"</td><td>"+obj[x].details[k]+"</td></tr>");
+    $("#"+scid+"t").append("<tr><td>"+langFilter(k)+"</td><td>"+langFilter(obj[x].details[k])+"</td></tr>");
     }
     y = y+ 1
   };

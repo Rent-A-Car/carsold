@@ -1,3 +1,17 @@
+
+function offpreloader(secs){
+  if (secs >= 1) { 
+    $("body").css('background-color', 'white');
+    $("#prel").hide();
+    $("#cont").show(); 
+   
+  } else { setTimeout(function(){offpreloader(secs+1);},1000);  }
+}
+
+
+
+
+
 function sendTG_N(data,status){
  if(status=="success"){
   
@@ -94,10 +108,12 @@ x= x+1;
 
  formAnk(obj);
 
- 
+ offpreloader(0);
   
   
 });
+
+
 
 
 function formAnk(obj){

@@ -1,5 +1,5 @@
 function langFilter(str){
-  var lang = "ru";
+  var lang = "en";
   var obj = JSON.parse(LangObject);
   var k = Object.keys(obj);
   for (a in k){

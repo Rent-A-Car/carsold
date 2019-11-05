@@ -1,7 +1,7 @@
 function langFilter(str){
   var navl = (navigator.systemLanguage || window.navigator.language)
   navl = navl.split('-')[0];
-  var lang = "ru";
+  var lang = "en";
   var obj = JSON.parse(LangObject);
   var k = Object.keys(obj);
   for (a in k){

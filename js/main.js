@@ -1,6 +1,11 @@
 function langFilter(str){
-  var lang;
+  var lang = "en";
   var obj = JSON.parse(LangObject);
+  var k = Object.keys(obj);
+  for (a in k){
+    var b = obj[k[a]][lang];
+    str = str.replace("{"+k[a]+"}",b);
+  }
   return str;
 }
 

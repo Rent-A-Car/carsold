@@ -1,12 +1,14 @@
 function langFilter(str){
-  var lang = "en";
+  var navl = (navigator.systemLanguage || window.navigator.language)
+  navl = navl.split('-')[0];
+  var lang = "ru";
   var obj = JSON.parse(LangObject);
   var k = Object.keys(obj);
   for (a in k){
     var b = obj[k[a]][lang];
     str = str.replace("{"+k[a]+"}",b);
   }
-  return str;
+  return 
 }
 
 
@@ -57,7 +59,7 @@ $("#"+scid).append("<table id='"+scid+"t' class='table tdata-features '></table>
     }
     y = y+ 1
   };
-$("#"+scid).append("<a href='#' onclick='reserveFunction(\""+x+"\");' class='reserve-button'><span class='glyphicon glyphicon-calendar'></span>ЗАРЕЗЕРВИРОВАТЬ СЕЙЧАС</a>");
+$("#"+scid).append("<a href='#' onclick='reserveFunction(\""+x+"\");' class='reserve-button'><span class='glyphicon glyphicon-calendar'></span>"+langFilter("reserve_button")+"</a>");
 
 
 x = x+1;
@@ -111,4 +113,5 @@ $(document).ready(function ()
   });
   
 offpreloader(0);
+  
 });

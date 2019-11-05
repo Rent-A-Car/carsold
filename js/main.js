@@ -40,7 +40,7 @@ imgt= imgt + '<div class="item"><img class="img-responsive" src="'+patern+ii+'.'
 
 $("#"+scid).append('<div class="tdata-img fadeIn"> <div id="carousel'+x+'" class="carousel slide" data-ride="carousel" ><div class="carousel-inner">'+imgt+'</div><a class="left carousel-control" href="#carousel'+x+'" role="button" data-slide="prev"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span><span class="sr-only">Предыдущий</span></a><a class="right carousel-control" href="#carousel'+x+'" role="button" data-slide="next"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><span class="sr-only">Следующий</span></a></div>');
 //
-$("#"+scid).append(" <div class='tdata-price'>"+obj[x].details.price+"<span class='info'>"+obj[x].details.rtype+"</span></div>");
+$("#"+scid).append(" <div class='tdata-price'>"+obj[x].details.price+"<span class='info'>"+langFilter(obj[x].details.rtype)+"</span></div>");
 $("#"+scid).append("<table id='"+scid+"t' class='table tdata-features '></table>");
   y = 0;
   for (var k in obj[x].details)

@@ -1,6 +1,7 @@
 function langFilter(str){
   var navl = (navigator.systemLanguage || window.navigator.language)
   navl = navl.split('-')[0];
+  alert(navl);
   var lang = "en";
   if (navl == "ru" || navl == "uk"||navl == "be"){
     lang="ru";

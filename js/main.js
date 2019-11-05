@@ -8,7 +8,7 @@ function langFilter(str){
     var b = obj[k[a]][lang];
     str = str.replace("{"+k[a]+"}",b);
   }
-  return 
+  return str;
 }
 
 
@@ -59,7 +59,7 @@ $("#"+scid).append("<table id='"+scid+"t' class='table tdata-features '></table>
     }
     y = y+ 1
   };
-$("#"+scid).append("<a href='#' onclick='reserveFunction(\""+x+"\");' class='reserve-button'><span class='glyphicon glyphicon-calendar'></span>"+langFilter("reserve_button")+"</a>");
+$("#"+scid).append("<a href='#' onclick='reserveFunction(\""+x+"\");' class='reserve-button'><span class='glyphicon glyphicon-calendar'></span>"+langFilter("{reserve_button}")+"</a>");
 
 
 x = x+1;

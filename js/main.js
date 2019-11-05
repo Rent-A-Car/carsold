@@ -1,5 +1,6 @@
 function langFilter(str){
-  
+  var lang;
+  var obj = JSON.parse(LangObject);
   return str;
 }
 

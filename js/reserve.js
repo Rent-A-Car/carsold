@@ -38,9 +38,7 @@ function sendTG_N(data,status){
   Swal.fire({
 title: langFilter('{thank}'),
 type: 'success',
-html:
-'С Вами свяжутся в ближайшее время<br>' +
-'конт.тел <a href="tel:+38268555972">+38268555972</a>',
+html: langFilter(msg_success),
    footer: '<a href="viber://chat/?number=38268555972"><img class="cnet" src="img/viber.svg" alt="Viber"></a><a href="https://www.facebook.com/montenegroarenda/"><img class="cnet" src="img/facebook.svg" alt="Facebook"></a><a href="whatsapp://send/?phone=38268555972"><img src="img/whatsapp.svg" alt="Whatsapp" class="cnet"></a>'
 })
   

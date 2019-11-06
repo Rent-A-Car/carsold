@@ -1,5 +1,5 @@
 function langFilter(str)
-
+{
   var navl = (navigator.systemLanguage || window.navigator.language)
   navl = navl.split("-")[0];
   var lang = "en";
@@ -8,12 +8,10 @@ function langFilter(str)
   }
 
 if(str=="{msg_success}"){
-  if (lang=="ru")
+  if (lang=="ru"){
   str ='С Вами свяжутся в ближайшее время<br>' +
 'конт.тел <a href="tel:+38268555972">+38268555972</a>';
   
-  return str;
-}else{
   return str;
 }
 }

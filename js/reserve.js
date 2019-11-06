@@ -1,10 +1,24 @@
-function langFilter(str){
+function langFilter(str)
+
   var navl = (navigator.systemLanguage || window.navigator.language)
   navl = navl.split("-")[0];
   var lang = "en";
   if (navl == "ru" || navl == "uk"||navl == "be"){
     lang="ru";
   }
+
+if(str=="{msg_success}"){
+  if (lang=="ru")
+  str ='С Вами свяжутся в ближайшее время<br>' +
+'конт.тел <a href="tel:+38268555972">+38268555972</a>';
+  
+  return str;
+}else{
+  return str;
+}
+}
+
+
   var obj = JSON.parse(LangObject);
   var k = Object.keys(obj);
   for (a in k){

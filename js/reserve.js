@@ -1,3 +1,25 @@
+function langFilter(str){
+  var navl = (navigator.systemLanguage || window.navigator.language)
+  navl = navl.split("-")[0];
+  var lang = "en";
+  if (navl == "ru" || navl == "uk"||navl == "be"){
+    lang="ru";
+  }
+  var obj = JSON.parse(LangObject);
+  var k = Object.keys(obj);
+  for (a in k){
+    var b = obj[k[a]][lang];
+    str = str.replace("{"+k[a]+"}",b);
+  }
+  return str;
+}
+
+
+function Translate(){
+  
+  
+}
+
 
 function offpreloader(secs){
   if (secs >= 1) { 
@@ -8,17 +30,13 @@ function offpreloader(secs){
   } else { setTimeout(function(){offpreloader(secs+1);},1000);  }
 }
 
-
-
-
-
 function sendTG_N(data,status){
  if(status=="success"){
   
   //
   
   Swal.fire({
-title: 'Спасибо',
+title: langFilter('{thank}'),
 type: 'success',
 html:
 'С Вами свяжутся в ближайшее время<br>' +
@@ -62,7 +80,32 @@ $( "#datepickerT" ).mask('00/00/0000');
 
 
 
-
+function setSelectData(b,urlParams,obj){
+ var x=0;
+ var a =parseInt(urlParams.get("carID"), 10);
+ var carID = ((Math.sqrt(a-b)-b)-10);
+ for (var i=0; i<b; i++){
+  if (urlParams.has("carID")){
+   if(carID <= b){
+    if (carID ==i){
+     $("#Dcars").append("<option selected value='"+x.toString()+"'>"+obj[x].details.name+"</option>");
+    }
+    else{
+     $("#Dcars").append("<option value='"+x.toString()+"'>"+obj[x].details.name+"</option>");
+    }
+   }
+  }else {
+   
+       if (x==0){
+     $("#Dcars").append("<option selected value='"+x.toString()+"'>"+obj[x].details.name+"</option>");
+    }
+    else{
+     $("#Dcars").append("<option value='"+x.toString()+"'>"+obj[x].details.name+"</option>");
+    }
+  }
+  x=x+1;
+ }
+}
 
 
 
@@ -73,41 +116,12 @@ $(document).ready(function ()
 
   var b = obj.length;
   var urlParams = new URLSearchParams(window.location.search);
-  var x = 0;
-for (var i = 0; i < obj.length; i++){
-if(urlParams.has("carID")){
-  var a = parseInt(urlParams.get("carID"), 10);
-  b=parseInt(b,10);
-  var carID = ((Math.sqrt(a-b)-b)-10);
-  if(carID <= b){
-  
-  if (i==carID){
-$("#Dcars").append("<option selected value='"+x.toString()+"'>"+obj[x].details.name+"</option>");
-}else{
-$("#Dcars").append("<option value='"+x.toString()+"'>"+obj[x].details.name+"</option>");
-};
-  }else{
-  if (i==0){
-$("#Dcars").append("<option selected value='"+x.toString()+"'>"+obj[x].details.name+"</option>");
-}else{
-$("#Dcars").append("<option value='"+x.toString()+"'>"+obj[x].details.name+"</option>");
-};
-  
-  }
-  }else{if (i==0){
-$("#Dcars").append("<option selected value='"+x.toString()+"'>"+obj[x].details.name+"</option>");
-}else{
-$("#Dcars").append("<option value='"+x.toString()+"'>"+obj[x].details.name+"</option>");
-};
-  };
-x= x+1;
-};
-  
-  
+ setSelectData(b,urlParams,obj);
+
  datap();
 
  formAnk(obj);
-
+ Translate();
  offpreloader(0);
   
   
@@ -159,7 +173,7 @@ function TlOrEm(id){
     $("#TelA").hide();
 Swal.fire({
 type: 'info',
-title: 'Обязательное наличие Viber или Whatsapp'
+title: langFilter("{msg_InfoTel}")
 })
     $("#contact").val("");
     $("#contact").attr("type","tel").attr("placeholder","+123 456-7890");

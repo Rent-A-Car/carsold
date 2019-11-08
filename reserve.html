@@ -55,21 +55,21 @@
 <section id="rsrv"  class="container">
 <div class="frm col-md-3 fadeInUp">
  <form id="FormAnketa" style="width:100%; height:100%">
-<p class="pselect" > <label for="Dcars">авто</label>
+<p class="pselect" > <label id="carl" for="Dcars">авто</label>
 <select name="car" class="form-control" id='Dcars'></select></p>
 <div class="form-group">
-    <label for="datepickerF">Период с</label>
+    <label id="datef"for="datepickerF">Период с</label>
     <input name="datef" type="text" class="date_picker form-control" id="datepickerF" required="true" placeholder="dd/mm/yy">
-    <label for="datepickerT">до</label>
+    <label id="datetl"for="datepickerT">до</label>
     <input name="datet" type="text" class="date_picker form-control" id="datepickerT" required="true" placeholder="dd/mm/yy">
     <div style="display: none;" class="invalid-feedback">Укажите период</div>
   </div>
   
 <div class="form-group">
-      <label  for="slsity">Город</label>
+      <label  id="sityl"for="slsity">Город</label>
       <select name="sity" class="form-control" id="slsity" required>
        <!-- <option selected>Выбирите...</option> -->
-        <option value="Herceg novi">Херцег-нови</option>
+        <option value="Herceg novi">Herceg novi</option>
         <!-- <option disabled value="2">Тиват</option>
         <option disabled value="3">Котор</option> -->
       </select>
@@ -77,7 +77,7 @@
     </div>
 
 <div class="form-group">
-    <label for="fio">Ф.И.О</label>
+    <label id="fiol"for="fio">Ф.И.О</label>
     <input required="true" name="fio" type="text" class="form-control" id="fio" placeholder="Александр Сергеевич Пушкин">
     <div style="display: none;" class="invalid-feedback">Укажите Ф.И.О</div>
   </div>
@@ -87,7 +87,7 @@
     <div style="display: none;" class="invalid-feedback">Укажите контактные данные</div>
   </div>
  <div class="form-group">
-  <label >Сообщение</label>
+  <label id="msgl">Сообщение</label>
   <textarea name="msg" class="form-control" placeholder="Здравствуйте. Мне удобнее у WhatsApp"></textarea>
   </div>
  <input style="margin-bottom:10px;"type="submit" class="btn btn-info" value="Подтвердить">

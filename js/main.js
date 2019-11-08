@@ -1,5 +1,5 @@
 function langFilter(str){
-  var navl = (navigator.systemLanguage || window.navigator.language)
+  var navl = (navigator.systemLanguage || window.navigator.language);
   navl = navl.split("-")[0];
   var lang = "en";
   if (navl == "ru" || navl == "uk"||navl == "be"){
@@ -14,14 +14,10 @@ function langFilter(str){
   return str;
 }
 
-
-
-
-
-
 function setCarsTable()
 {
-  var obj = JSON.parse(jsonCarData);
+
+var obj = JSON.parse(jsonCarData);
 var x = 0;
 for (var i = 0; i < obj.length; i++){
 if (i==0){
@@ -59,27 +55,26 @@ $("#"+scid).append("<table id='"+scid+"t' class='table tdata-features '></table>
     if (y > 2)
     {
     $("#"+scid+"t").append("<tr><td>"+langFilter(k)+"</td><td>"+langFilter(obj[x].details[k])+"</td></tr>");
-    }
+      };
     y = y+ 1
   };
 $("#"+scid).append("<a href='#' onclick='reserveFunction(\""+x+"\");' class='reserve-button'><span class='glyphicon glyphicon-calendar'></span>"+langFilter("{reserve_button}")+"</a>");
 
 
 x = x+1;
-}
+  };
 
-
-  
 
 //  $("#scars").append(keys);
 };
+
 function reserveFunction(car){
 car=parseInt(car,10);
 var a = 10+car;
 var b = $(".tdata").length;
-b=parseInt(b,10);
+b = parseInt(b,10);
 var id = ((a+b)**2)+b;
-//alert(id);
+
 window.location.assign(window.location.origin+"/reserve?carID="+id.toString());
 
 };
@@ -101,13 +96,14 @@ function offpreloader(secs){
     $("#cont").show(); 
    
   } else { setTimeout(function(){offpreloader(secs+1);},1000);  }
-}
+};
 
 
-
-$(document).ready(function ()
+/*
+$(document).ready(function()
 {
-  setCarsTable();
+  alert(0);
+  //setCarsTable();
 
   $("#Dcars").change(function ()
   {
@@ -118,3 +114,4 @@ $(document).ready(function ()
 offpreloader(0);
   
 });
+*/

@@ -10,11 +10,15 @@ function langFilter(str)
 if(str=="{msg_success}"){
   if (lang=="ru"){
   str ='С Вами свяжутся в ближайшее время<br>' +
-'конт.тел <a href="tel:+38268555972">+38268555972</a>';
+'конт.тел: <a href="tel:+38268555972">+38268555972</a>';
   
-  return str;
-}
-}
+ }else {
+      if (lang=="en"){
+      str="With you will contact the near future<br>Contact number: <a href=\"tel:+38268555972\">+38268555972</a>";
+      }
+    }
+    return str;
+  }
 
 
   var obj = JSON.parse(LangObject);
@@ -59,7 +63,7 @@ html: langFilter("{msg_success}"),
   
   
 //alert("Спасибо\nС вами свяжутся в ближайшее время\nконт.тел +38268555972");
-  window.location.href("https://"+window.location.hostname);
+ // window.location.href("https://"+window.location.hostname);
  }else{
   alert("error "+status+"\nПожалуйста свяжитесь с администрацией +38268555972(Viber,WhatsApp)");
  }

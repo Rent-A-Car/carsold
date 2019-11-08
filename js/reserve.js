@@ -40,8 +40,8 @@ function Translate(){
 function offpreloader(secs){
   if (secs >= 1) { 
     $("body").css('background-color', 'white');
-    $("#prel").hide();
-    $("#cont").show(); 
+    $("#prel").fadeOut(30);
+    $("#cont").fadeIn(200); 
    
   } else { setTimeout(function(){offpreloader(secs+1);},1000);  }
 }

@@ -4,7 +4,7 @@ function langFilter(str)
   navl = navl.split("-")[0];
   var lang = "en";
   if (navl == "ru" || navl == "uk"||navl == "be"){
-    lang="ru";
+    lang="en";
   }
 
 if(str=="{msg_success}"){
@@ -34,6 +34,23 @@ if(str=="{msg_success}"){
 function Translate(){
   $("#carl").empty(); 
   $("#carl").text(langFilter("{car}"));
+ $("#datefl").empty(); 
+  $("#datefl").text(langFilter("{datefrom}"));
+$("#datetl").empty(); 
+  $("#datetl").text(langFilter("{dateto}"));
+$("#sityl").empty(); 
+  $("#sityl").text(langFilter("{sity}"));
+$("#fiol").empty(); 
+  $("#fiol").text(langFilter("{fio}"));
+$("#PostA").empty(); 
+  $("#PostA").text(langFilter("{email}"));
+$("#PostLbl").empty(); 
+  $("#PostLbl").text(langFilter("{email}"));
+$("#TelLbl").empty(); 
+  $("#TelLbl").text(langFilter("{tel}"));
+$("#TelA").empty(); 
+  $("#TelA").text(langFilter("{tel}"));
+
   
 }
 
@@ -165,7 +182,7 @@ function formAnk(obj){
    
    var dodtk = "\nДодаткове повідомлення:\n\n"+msg;
   }
-    str = str+"Від "+datef+" до "+datet+"\nв "+sity+"\nАвто: "+obj[parseInt(car,10)].details.name+"\nП.І.Б: "+fio+"\n"+contact+dodtk;
+    str = str+"Від "+datef+" до "+datet+"\nв місті: "+sity+"\nАвто: "+obj[parseInt(car,10)].details.name+"\nП.І.Б: "+fio+"\n"+contact+dodtk;
     sendTG(str);
    // sendTG_N("","success");
 });

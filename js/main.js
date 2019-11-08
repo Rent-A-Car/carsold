@@ -104,7 +104,7 @@ offpreloader(0);
 $(document).ready(function()
 {
   
-  //setCarsTable();
+  setCarsTable();
 
   $("#Dcars").change(function ()
   {

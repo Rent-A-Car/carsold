@@ -99,10 +99,11 @@ function offpreloader(secs){
 };
 
 
+offpreloader(0);
 
 $(document).ready(function()
 {
-  alert(0);
+  
   //setCarsTable();
 
   $("#Dcars").change(function ()

@@ -33,14 +33,14 @@
 
 
   <title>Аренда автомобилей</title
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="js/jquery.js" ></script>
 <script src="js/bootstrap.min.js"></script>
 <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/main.css" type="text/css" rel="stylesheet">
 <link href="css/pre.css" type="text/css" rel="stylesheet">
 
  </head>
- <body>  
+ <body> 
  <div id="prel" "style="height:100%;width:100%;"class="pbody">
   <div  class="loading-window">
 <div class="car">
@@ -69,7 +69,10 @@
  <select class="form-control" id='Dcars'></select></p></header>
 <section id="scars"  class="container">
    </section></div>
- <script src="js/data.js"></script>
-  <script src="js/main.js"></script>
+ <script src="js/data.js"> </script>
+  <script> $(document).ready(function() { //you can replace $ with Jquery
+
+  alert( 'jquery working~!' );
+});</script>
  </body>
 </html>

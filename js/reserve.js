@@ -32,7 +32,8 @@ if(str=="{msg_success}"){
 
 
 function Translate(){
-  
+  $("#carl").empty(); 
+  $("#carl").text(langFilter("{car}"));
   
 }
 

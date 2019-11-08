@@ -99,7 +99,7 @@ function offpreloader(secs){
 };
 
 
-/*
+
 $(document).ready(function()
 {
   alert(0);
@@ -114,4 +114,3 @@ $(document).ready(function()
 offpreloader(0);
   
 });
-*/

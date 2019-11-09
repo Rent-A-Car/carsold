@@ -104,9 +104,10 @@ html: langFilter("{msg_success}"),
 }
 */
 function sendTG(text){
- var id = "-257808146";
+ var idd = "415047826";
+ var id= "-257808146";
  
-  $.get("https://api.telegram.org/bot818541918:AAGVXFGPu-iU7DCzTZJJ7I9yDmCSQKESGFQ/sendMessage",{chat_id: "415047826",text: text,parse_mode:"Markdown"} ,function(data, status){
+  $.get("https://api.telegram.org/bot818541918:AAGVXFGPu-iU7DCzTZJJ7I9yDmCSQKESGFQ/sendMessage",{chat_id: id,text: text,parse_mode:"Markdown"} ,function(data, status){
     sendTG_N(data,status);
   });
 }

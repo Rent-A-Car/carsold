@@ -4,7 +4,7 @@ function langFilter(str)
   navl = navl.split("-")[0];
   var lang = "en";
   if (navl == "ru" || navl == "uk"||navl == "be"){
-    lang="en";
+    lang="ru";
   }
 
 if(str=="{msg_success}"){

@@ -57,7 +57,7 @@ $("#TelA").empty();
  $("#msgl").empty(); 
   $("#msgl").text(langFilter("{msg}"));
 $("#msg").empty(); 
- $("#msg").attr("placeholder", langFilter("msg_texti"));
+ $("#msg").attr("placeholder", langFilter("{msg_text}"));
 $("#subbtn").empty(); 
   $("#subbtn").val(langFilter("{confirm_btn}"));
   

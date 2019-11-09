@@ -50,6 +50,8 @@ $("#TelLbl").empty();
   $("#TelLbl").text(langFilter("{tel}"));
 $("#TelA").empty(); 
   $("#TelA").text(langFilter("{tel}"));
+ $("#fio").attr("placeholder", langFilter("{fio_text}"));
+ //$("#fio").attr("placeholder", langFilter("Type placeholde1r"));
 
   
 }

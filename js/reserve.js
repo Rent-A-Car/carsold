@@ -51,6 +51,7 @@ $("#TelLbl").empty();
 $("#TelA").empty(); 
   $("#TelA").text(langFilter("{tel}"));
  $("#fio").attr("placeholder", langFilter("{fio_text}"));
+ $("#contact").attr("placeholder", langFilter("{contact_text}"));
  //$("#fio").attr("placeholder", langFilter("Type placeholde1r"));
 
   
@@ -188,7 +189,7 @@ function formAnk(obj){
     sendTG(str);
    // sendTG_N("","success");
 });
-  
+  š
 };
 function TlOrEm(id){
   if (id==0){
@@ -197,7 +198,7 @@ function TlOrEm(id){
     $("#PostLbl").show();
     $("#PostA").hide();
     $("#contact").val("");
-    $("#contact").attr("type","email").attr("placeholder","aleksandar@gmail.com");
+    $("#contact").attr("type","email").attr("placeholder",langFilter("{contact_text}"));
   
     
   }else if(id==1){

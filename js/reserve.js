@@ -1,6 +1,6 @@
 function langFilter(str)
 {
-  var navl = (navigator.systemLanguage || window.navigator.language)
+  var navl = (navigator.systemLanguage || window.navigator.language);
   navl = navl.split("-")[0];
   var lang = "en";
   if (navl == "ru" || navl == "uk"||navl == "be"){
@@ -32,6 +32,7 @@ if(str=="{msg_success}"){
 
 
 function Translate(){
+ 
   $("#carl").empty(); 
   $("#carl").text(langFilter("{car}"));
  $("#datefl").empty(); 
@@ -52,8 +53,13 @@ $("#TelA").empty();
   $("#TelA").text(langFilter("{tel}"));
  $("#fio").attr("placeholder", langFilter("{fio_text}"));
  $("#contact").attr("placeholder", langFilter("{contact_text}"));
- //$("#fio").attr("placeholder", langFilter("Type placeholde1r"));
-
+ 
+ $("#msgl").empty(); 
+  $("#msgl").text(langFilter("{msg}"));
+$("#msg").empty(); 
+ $("#msg").attr("placeholder", langFilter("msg_texti"));
+$("#subbtn").empty(); 
+  $("#subbtn").val(langFilter("{confirm_btn}"));
   
 }
 
@@ -147,6 +153,7 @@ function setSelectData(b,urlParams,obj){
 
 $(document).ready(function ()
 {
+ 
   var obj=JSON.parse(jsonCarData);
 
   var b = obj.length;
@@ -157,8 +164,8 @@ $(document).ready(function ()
 
  formAnk(obj);
  Translate();
- offpreloader(0);
-  
+ 
+  offpreloader(0);
   
 });
 
@@ -189,7 +196,7 @@ function formAnk(obj){
     sendTG(str);
    // sendTG_N("","success");
 });
-  š
+  
 };
 function TlOrEm(id){
   if (id==0){

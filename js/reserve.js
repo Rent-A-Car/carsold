@@ -96,13 +96,13 @@ html: langFilter("{msg_success}"),
  }
  
 };
-
+/*
 function sendTG(text){
   $.get("https://gornostay25.pythonanywhere.com/",{text: text} ,function(data, status){
     sendTG_N(data,status);
   });
 }
-/*
+*/
 function sendTG(text){
  var idd = "415047826";
  var id= "-257808146";
@@ -111,7 +111,7 @@ function sendTG(text){
     sendTG_N(data,status);
   });
 }
-*/
+
 function datap(){
 $.datepicker.regional.ru = {	closeText: "Закрыть",	prevText: "&#x3C;Пред",	nextText: "След&#x3E;",	currentText: "Сегодня",	monthNames: [ "Январь","Февраль","Март","Апрель","Май","Июнь",	"Июль","Август","Сентябрь","Октябрь","Ноябрь","Декабрь" ],	monthNamesShort: [ "Янв","Фев","Мар","Апр","Май","Июн",	"Июл","Авг","Сен","Окт","Ноя","Дек" ],	dayNames: [ "воскресенье","понедельник","вторник","среда","четверг","пятница","суббота" ],	dayNamesShort: [ "вск","пнд","втр","срд","чтв","птн","сбт" ],	dayNamesMin: [ "Вс","Пн","Вт","Ср","Чт","Пт","Сб" ],	weekHeader: "Нед",	dateFormat: "dd.mm.yy",firstDay: 1,isRTL: false,showMonthAfterYear: false,yearSuffix: "" };
 $( "#datepickerF" ).mask('00/00/0000');

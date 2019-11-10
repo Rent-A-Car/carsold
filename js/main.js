@@ -18,21 +18,54 @@ function setCarsTable()
 {
 
 var obj = JSON.parse(jsonCarData);
+var b = obj.length;
+var urlParams = new URLSearchParams(window.location.search);
+var a =parseInt(urlParams.get("carID"), 10);
+var carID = ((Math.sqrt(a-b)-b)-10);
 var x = 0;
-for (var i = 0; i < obj.length; i++){
-if (i==0){
-$("#Dcars").append("<option selected value='"+x.toString()+"'>"+obj[x].details.name+"</option>");
-}else{
-$("#Dcars").append("<option value='"+x.toString()+"'>"+obj[x].details.name+"</option>");
-};
+
+for (var i=0; i<b; i++){
+  if (urlParams.has("carID")){
+   if(carID <= b){
+    if (carID ==i){
+     $("#Dcars").append("<option selected value='"+x.toString()+"'>"+obj[x].details.name+"</option>");
+    }
+    else{
+     $("#Dcars").append("<option value='"+x.toString()+"'>"+obj[x].details.name+"</option>");
+    }
+   }
+  }else {
+   
+       if (x==0){
+     $("#Dcars").append("<option selected value='"+x.toString()+"'>"+obj[x].details.name+"</option>");
+    }
+    else{
+     $("#Dcars").append("<option value='"+x.toString()+"'>"+obj[x].details.name+"</option>");
+    }
+  }
+  x=x+1;
+ }
+
+x=0;    
+
+for (var i = 0; i < b; i++){
 var scid = "t-"+ x.toString();
 $("#scars").append("<div class='tdata' id='"+scid+"'></div>");
 // показ при першому записі
-if (x == 0){
+    if (urlParams.has("carID")){
+if (x == carID){
 $("#"+scid).show();
 }else{
 $("#"+scid).hide(); //hide
 };
+    }else{
+      if (x == x){
+$("#"+scid).show();
+}else{
+$("#"+scid).hide(); //hide
+};
+      
+    }
 //
 // цикл за фото
 var imgt = "";

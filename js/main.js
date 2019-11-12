@@ -59,7 +59,7 @@ $("#"+scid).show();
 $("#"+scid).hide(); //hide
 };
     }else{
-      if (x == x){
+      if (x == 0){
 $("#"+scid).show();
 }else{
 $("#"+scid).hide(); //hide

@@ -56,13 +56,13 @@ $("#scars").append("<div class='tdata' id='"+scid+"'></div>");
 if (x == carID){
 $("#"+scid).show();
 }else{
-$("#"+scid).hide(); //hide
+$("#"+scid).hide();
 };
     }else{
       if (x == 0){
 $("#"+scid).show();
 }else{
-$("#"+scid).hide(); //hide
+$("#"+scid).hide();
 };
       
     }

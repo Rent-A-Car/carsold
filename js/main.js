@@ -85,7 +85,7 @@ $("#"+scid).append("<table id='"+scid+"t' class='table tdata-features '></table>
   y = 0;
   for (var k in obj[x].details)
   {
-    if (y > 2)
+    if (y > 3)
     {
     $("#"+scid+"t").append("<tr><td>"+langFilter(k)+"</td><td>"+langFilter(obj[x].details[k])+"</td></tr>");
       };

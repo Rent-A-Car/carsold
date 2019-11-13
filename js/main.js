@@ -73,8 +73,12 @@ var imgt = "";
 for (var ii = 0; ii < obj[x].img[0]; ii++){
     var patern = obj[x].img[1];
 if (ii==0){
+        if (x=0){
 imgt= imgt + '<div  class="item active"><img class="img-responsive" src="'+patern+ii+'.'+obj[x].img[2]+'" alt="'+obj[x].details.name+'"></div>';
-}else {
+        }else {
+imgt= imgt + '<div class="item"><img class="img-responsive" data-src="'+patern+ii+'.'+obj[x].img[2]+'" alt="'+obj[x].details.name+'"></div>';
+    }
+        }else {
 imgt= imgt + '<div class="item"><img class="img-responsive" data-src="'+patern+ii+'.'+obj[x].img[2]+'" alt="'+obj[x].details.name+'"></div>';
     }
 };
@@ -129,7 +133,8 @@ function changeTC(value)
   var scid = "#t-"+value;
   $(".tdata").css("display", "none");
   $(scid).css("display", "block");
- 
+  var dv= $("div#"+carousel+value+" > div.carousel-inner > div.active");
+  dv.addClass("active");
 };
 
 function offpreloader(secs){

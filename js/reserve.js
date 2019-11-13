@@ -66,7 +66,7 @@ $("#subbtn").empty();
 
 function offpreloader(secs){
   if (secs >= 1) { 
-    $("body").css('background-color', 'white');
+    $("body").css('background-color', '#f0f0f0');
     $("#prel").fadeOut(30);
     $("#cont").fadeIn(200); 
    

@@ -3,7 +3,7 @@ function langFilter(str){
   navl = navl.split("-")[0];
   var lang = "en";
   if (navl == "ru" || navl == "uk"||navl == "be"){
-    lang="ru";
+    lang="en";
   }
   var obj = JSON.parse(LangObject);
   var k = Object.keys(obj);
@@ -71,11 +71,11 @@ $("#"+scid).hide();
 var imgt = "";
 for (var ii = 0; ii < obj[x].img[0]; ii++){
     var patern = obj[x].img[1];
-/*if (ii==0){
+if (ii==0){
 imgt= imgt + '<div  class="item active"><img class="img-responsive" src="'+patern+ii+'.'+obj[x].img[2]+'" alt="'+obj[x].details.name+'"></div>';
 }else {
 imgt= imgt + '<div class="item"><img class="img-responsive" src="'+patern+ii+'.'+obj[x].img[2]+'" alt="'+obj[x].details.name+'"></div>';
-    }*/
+    }
 };
 
 $("#"+scid).append('<div class="tdata-img fadeIn"> <div id="carousel'+x+'" class="carousel slide" data-ride="carousel" ><div class="carousel-inner">'+imgt+'</div><a class="left carousel-control" href="#carousel'+x+'" role="button" data-slide="prev"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span><span class="sr-only">Предыдущий</span></a><a class="right carousel-control" href="#carousel'+x+'" role="button" data-slide="next"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><span class="sr-only">Следующий</span></a></div>');

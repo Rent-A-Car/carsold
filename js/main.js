@@ -3,7 +3,7 @@ function langFilter(str){
   navl = navl.split("-")[0];
   var lang = "en";
   if (navl == "ru" || navl == "uk"||navl == "be"){
-    lang="en";
+    lang="ru";
   }
   var obj = JSON.parse(LangObject);
   var k = Object.keys(obj);

@@ -53,7 +53,7 @@ $("#TelA").empty();
   $("#TelA").text(langFilter("{tel}"));
  $("#fio").attr("placeholder", langFilter("{fio_text}"));
  $("#contact").attr("placeholder", langFilter("{contact_text}"));
- 
+ $("#sity_another").text(langFilter("{sity_another}"));
  $("#msgl").empty(); 
   $("#msgl").text(langFilter("{msg}"));
 $("#msg").empty(); 

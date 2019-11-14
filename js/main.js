@@ -75,7 +75,7 @@ for (var ii = 0; ii < obj[x].img[0]; ii++){
 if (ii==0){ 
 if (x==0){
 imgt= imgt + '<div  class="item active"><img class="img-responsive" src="'+patern+ii+'.'+obj[x].img[2]+'" alt="'+obj[x].details.name+'"></div>';
-        }else{imgt= imgt + '<div class="item ntactive"><img class="img-responsive" data-src="'+patern+ii+'.'+obj[x].img[2]+'" alt="'+obj[x].details.name+'"></div>';
+}else{imgt= imgt + '<div class="item ntactive"><img class="img-responsive" data-src="'+patern+ii+'.'+obj[x].img[2]+'" alt="'+obj[x].details.name+'"></div>';
  }
         
    

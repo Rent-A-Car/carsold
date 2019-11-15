@@ -4,7 +4,7 @@ function langFilter(str){
   navl = navl.split("-")[0];
   var lang = "en";
   if (navl == "ru" || navl == "uk"||navl == "be"){
-    lang="ru";
+    lang="en";
   }
   var obj = JSON.parse(LangObject);
   var k = Object.keys(obj);
@@ -13,6 +13,20 @@ function langFilter(str){
     str = str.replace("{"+k[a]+"}",b);
   }
   return str;
+}
+function Translate(){
+ $(".translate").each(function (){
+  var t = $(this);
+  if (t.hasAttr("patern")){
+   var p = t.attr("patern");
+   t.text(langFilter(p));
+  }else{
+   t.text(langFilter(t.text()));
+  }
+  if (t.hasAttr("placeholder")){
+   t.attr("placeholder",langFilter(t.attr("placeholder")));
+  }
+ });
 }
 
 function setCarsTable()
@@ -154,12 +168,19 @@ function offpreloader(secs){
   } else { setTimeout(function(){offpreloader(secs+1);},1000);  }
 };
 
-
-offpreloader(0);
-
+function setFirstData(){
+  var width = document.body.clientWidth;
+  if (width < 600){
+  $("#cont").append('<section id="scars" class="container"></section>');
+  }else{
+    $("#cont").append('<section id="scars" class="container"></section>');
+  }
+}
 $(document).ready(function()
 {
   
+  setFirstData();
+  Translate();
   setCarsTable();
 
   $("#Dcars").change(function ()

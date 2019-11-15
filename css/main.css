@@ -10,6 +10,12 @@ img[data-src]{
 }
 
 /* button */
+
+
+
+
+/*////////*/
+
 .reserve-button {
   background-color: #ffbf00;
   color: #fff;
@@ -30,22 +36,36 @@ img[data-src]{
 .reserve-button span {
   margin-right: 7px;
 }
-/* */
+/*//////////////////////////*/
 
 
 
 /*custom select */
+@media (max-width:600px){
 
 
-.pselect{
-margin-top: 10px;
- margin-left: auto;
- margin-right: auto;
- padding-left: 15px;
- padding-right: 15px;
+
+.form-control{
+ display: inline-block;
+ width:65%;
 }
 
-
+ header{
+ margin: 0;
+ padding: 1%;
+ width:100%;
+ background-color: gainsboro;
+ margin-bottom: 15px;
+}
+}
+.hcontainer{
+ width 100%;
+ text-align: center;
+}
+.hcontainer h1{
+ margin: 0;
+ padding: 0;
+}
 
 /**/
 

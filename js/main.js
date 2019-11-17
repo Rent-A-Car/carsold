@@ -1,4 +1,12 @@
 $.fn.hasAttr = function(name) { return this.attr(name) !== undefined; };
+function getbank(){
+var navl = (navigator.systemLanguage || window.navigator.language);
+navl = navl.split("-")[1];
+if(navl=="RU"){return("cbr");};
+if(navl=="UA"){return("nbu");};
+return("eucb"); 
+}
+
 function langFilter(str){
   var navl = (navigator.systemLanguage || window.navigator.language);
   navl = navl.split("-")[0];
@@ -29,7 +37,7 @@ function Translate(){
  });
 }
 
-function setCarsTable()
+function setCarsTableM()
 {
 
 var obj = JSON.parse(jsonCarData);
@@ -86,15 +94,23 @@ $("#"+scid).hide();
 var imgt = "";
 for (var ii = 0; ii < obj[x].img[0]; ii++){
     var patern = obj[x].img[1];
-if (ii==0){ 
+if (ii==0){
+ 
+
+if (x==carID){
+console.log(carID);
+imgt= imgt + '<div  class="item active"><img class="img-responsive" src="'+patern+ii+'.'+obj[x].img[2]+'" alt="'+obj[x].details.name+'"></div>';
+}else{
 if (x==0){
 imgt= imgt + '<div  class="item active"><img class="img-responsive" src="'+patern+ii+'.'+obj[x].img[2]+'" alt="'+obj[x].details.name+'"></div>';
-}else{imgt= imgt + '<div class="item ntactive"><img class="img-responsive" data-src="'+patern+ii+'.'+obj[x].img[2]+'" alt="'+obj[x].details.name+'"></div>';
- }
+}else{
+imgt= imgt + '<div class="item ntactive"><img class="img-responsive" data-src="'+patern+ii+'.'+obj[x].img[2]+'" alt="'+obj[x].details.name+'"></div>';
+}
+}
         
    
       
-      }else {
+ }else {
 imgt= imgt + '<div class="item"><img class="img-responsive" data-src="'+patern+ii+'.'+obj[x].img[2]+'" alt="'+obj[x].details.name+'"></div>';
     }
 };
@@ -171,17 +187,34 @@ function offpreloader(secs){
 function setFirstData(){
   var width = document.body.clientWidth;
   if (width < 600){
-  $("#cont").append('<section id="scars" class="container"></section>');
+  $("#cont").html('<header> <div class="hcontainer container"> <h1 class="translate" patern="{h1title}">Аренда авто Черногория</h1> <select class="form-control" id="Dcars"></select> </div> </header><section id="scars" class="container"></section>');
+   setCarsTableM();
   }else{
-    $("#cont").append('<section id="scars" class="container"></section>');
+    $("#cont").prepend('<header><div class="container" > <div class="logo" ><h1 class="translate" patern="{h1title}">Аренда авто Черногория</h1> </div> <ul class="hedinfo" > <li><i class="fas fa-phone-square-alt"></i>mob: <a href="tel:+38268555972" >+38268555972</a><a href="viber://chat/?number=38268555972"><object type="image/svg+xml" class="cnet" data="img/viber.svg" alt="Viber"></object></a><a href="https://www.facebook.com/montenegroarenda/"><object type="image/svg+xml" class="cnet" data="img/facebook.svg" alt="Facebook"></object></a><a href="whatsapp://send/?phone=38268555972"><object type="image/svg+xml" data="img/whatsapp.svg" alt="Whatsapp" class="cnet"></object></a></li> <li><i class="fas fa-at"></i>e-mail: <a href="mailto:arendamontenegro.car@gmail.com" >arendamontenegro.car@gmail.com</a> </li> </ul> </div> </header>');
+  weatherLL();
   }
+}
+function weatherLL(){
+var w = document.getElementById("weathCAN");
+var ctx = w.getContext('2d');
+var img = new Image();
+img.crossOrigin= "anonimous";
+img.onload = function(){
+ctx.drawImage(img, 0, 0, 120, 120, 0, 0, 120, 156);
+console.log(0);
+$("#weathIMG").removeAttr("src");
+$("#weathIMG").attr("src",w.toDataURL('image/jpeg'));
+//alert(w.toDataURL("image/jpeg"));
+}
+img.src = 'https://shareimg.gq/weather';
+
+
 }
 $(document).ready(function()
 {
   
   setFirstData();
   Translate();
-  setCarsTable();
 
   $("#Dcars").change(function ()
   {
@@ -191,4 +224,4 @@ $(document).ready(function()
   
 offpreloader(0);
   
-});
+}); 

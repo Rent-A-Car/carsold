@@ -191,7 +191,7 @@ function offpreloader(secs){
   if (secs >= 1) { 
     var width = document.body.clientWidth;
       if (width > 600){
-    $("body").css('background', 'url("img/background.png")')
+    $("body").css('background', 'url("img/background.jpg")')
     .css('background-repeat','no-repeat')
     .css('background-size','100% 100%');
     }else{

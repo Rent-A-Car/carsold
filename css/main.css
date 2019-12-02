@@ -47,6 +47,29 @@ h1 {
 margin:0;
 padding:0;
 }
+
+
+.reserve-button {
+  background-color: #ffbf00;
+  color: #fff;
+  display: block;
+  min-height: 50px;
+  line-height: 51px;
+  font-size: 25px;
+  font-weight: 900;
+  padding: 0 15px;
+  box-shadow: 6px 6px 0 #efe9e9;
+  text-transform: uppercase;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+
+
+
+
+
+
 .container {
   width: 100%;
   display:flex;
@@ -119,7 +142,7 @@ align-self:flex-start;
 
 
 .Citem{
-max-width:250px;
+max-width:300px;
 margin:1.4em;
 }
 .Citem .itmimg img {width:100%;}

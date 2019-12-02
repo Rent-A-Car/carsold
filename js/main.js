@@ -14,6 +14,9 @@ function langFilter(str){
   var lang = "en";
   if (navl == "ru" || navl == "uk"||navl == "be"){
     lang="ru";
+      if (document.body.clientWidth > 600){
+    $(".reserve-button").css(  "font-size", "17.5px");
+    }
   }
   var obj = JSON.parse(LangObject);
   var k = Object.keys(obj);

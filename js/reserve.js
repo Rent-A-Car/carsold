@@ -70,7 +70,7 @@ function offpreloader(secs){
     $("#prel").fadeOut(30);
     $("#cont").fadeIn(200); 
    
-  } else { setTimeout(function(){offpreloader(secs+1);},1000);  }
+  } else { setTimeout(function(){offpreloader(secs+1);},500);  }
 }
 
 function sendTG_N(data,status){

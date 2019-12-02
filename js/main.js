@@ -1,9 +1,10 @@
 $.fn.hasAttr = function(name) { return this.attr(name) !== undefined; };
 function getbank(){
 var navl = (navigator.systemLanguage || window.navigator.language);
-navl = navl.split("-")[1];
-if(navl=="RU"){return("cbr");};
-if(navl=="UA"){return("nbu");};
+navl1 = navl.split("-")[0];
+navl2 = navl.split("-")[1];
+if(navl2=="RU"){return("cbr");};
+if(navl1=="uk"){return("nbu");};
 return("eucb"); 
 }
 
@@ -142,9 +143,16 @@ x = x+1;
   if (img.hasAttr("data-src")){
     img.attr("src",img.attr("data-src"));
     img.removeAttr("data-src");
+    
   }
  
-})
+});
+$("#Dcars").change(function ()
+  {
+    changeTC(this.value);
+
+  });
+  
 };
 
 function reserveFunction(car){
@@ -176,12 +184,20 @@ function changeTC(value)
 };
 
 function offpreloader(secs){
+
   if (secs >= 1) { 
-    $("body").css('background-color', 'white');
+    var width = document.body.clientWidth;
+      if (width > 600){
+    $("body").css('background', 'url("img/background.png")')
+    .css('background-repeat','no-repeat')
+    .css('background-size','100% 100%');
+    }else{
+    $("body").css('background','white')
+    }
     $("#prel").hide();
     $("#cont").show(); 
    
-  } else { setTimeout(function(){offpreloader(secs+1);},1000);  }
+  } else { setTimeout(function(){offpreloader(secs+1);},500);  }
 };
 
 function setFirstData(){
@@ -190,10 +206,93 @@ function setFirstData(){
   $("#cont").html('<header> <div class="hcontainer container"> <h1 class="translate" patern="{h1title}">Аренда авто Черногория</h1> <select class="form-control" id="Dcars"></select> </div> </header><section id="scars" class="container"></section>');
    setCarsTableM();
   }else{
-    $("#cont").prepend('<header><div class="container" > <div class="logo" ><h1 class="translate" patern="{h1title}">Аренда авто Черногория</h1> </div> <ul class="hedinfo" > <li><i class="fas fa-phone-square-alt"></i>mob: <a href="tel:+38268555972" >+38268555972</a><a href="viber://chat/?number=38268555972"><object type="image/svg+xml" class="cnet" data="img/viber.svg" alt="Viber"></object></a><a href="https://www.facebook.com/montenegroarenda/"><object type="image/svg+xml" class="cnet" data="img/facebook.svg" alt="Facebook"></object></a><a href="whatsapp://send/?phone=38268555972"><object type="image/svg+xml" data="img/whatsapp.svg" alt="Whatsapp" class="cnet"></object></a></li> <li><i class="fas fa-at"></i>e-mail: <a href="mailto:arendamontenegro.car@gmail.com" >arendamontenegro.car@gmail.com</a> </li> </ul> </div> </header>');
-  weatherLL();
+    //$("#cont").prepend('<header><div class="container" > <div class="logo" ><h1 class="translate" patern="{h1title}">Аренда авто Черногория</h1> </div> <ul class="hedinfo" > <li><i class="fas fa-phone-square-alt"></i>mob: <a href="tel:+38268555972" >+38268555972</a><a href="viber://chat/?number=38268555972"><object type="image/svg+xml" class="cnet" data="img/viber.svg" alt="Viber"></object></a><a href="https://www.facebook.com/montenegroarenda/"><object type="image/svg+xml" class="cnet" data="img/facebook.svg" alt="Facebook"></object></a><a href="whatsapp://send/?phone=38268555972"><object type="image/svg+xml" data="img/whatsapp.svg" alt="Whatsapp" class="cnet"></object></a></li> <li><i class="fas fa-at"></i>e-mail: <a href="mailto:arendamontenegro.car@gmail.com" >arendamontenegro.car@gmail.com</a> </li> </ul> </div> </header>');
+    weatherLL();
+    setCarTable();
+    tableanim();
   }
 }
+function tableanim(){
+$(".Citem").each(function(index,value){
+var itm = $(this);
+
+itm.hover(function(){
+var t=$("#it"+itm.attr("id"));
+t.show();
+$("#"+itm.attr("id")+" .reserve-button").show();
+},function(){
+var t=$("#it"+itm.attr("id"));
+t.hide();
+})
+});
+
+}
+
+
+
+
+function setCarTable(){
+var obj = JSON.parse(jsonCarData);
+var b = obj.length;
+
+for (var i=0; i<b; i++){
+var ins = "#"+i.toString();
+$(".main").append('<div class="Citem" id="'+i.toString()+'"></div>');
+$(ins).append('<span class="name" >'+obj[i].details.name+'</span>');
+var imgt = "";
+for (var ii = 0; ii < obj[i].img[0]; ii++){
+    var patern = obj[i].img[1];
+if (ii==0){
+imgt= imgt + '<div  class="item active"><img class="img-responsive" src="'+patern+ii+'.'+obj[i].img[2]+'" alt="'+obj[i].details.name+'"></div>';
+ }else {
+imgt= imgt + '<div class="item"><img class="img-responsive" data-src="'+patern+ii+'.'+obj[i].img[2]+'" alt="'+obj[i].details.name+'"></div>';
+    }
+}
+$(ins).append('<div class="itmimg"> <div id="carousel'+i+'" class="carousel slide" data-ride="carousel" ><div class="carousel-inner">'+imgt+'</div><a class="left carousel-control" href="#carousel'+i+'" role="button" data-slide="prev"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span><span class="sr-only">Предыдущий</span></a><a class="right carousel-control" href="#carousel'+i+'" role="button" data-slide="next"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><span class="sr-only">Следующий</span></a></div>');
+$(ins).append(" <div class='tdata-price'><span class='info'>"+langFilter(obj[i].details.rpref)+"</span>"+obj[i].details.price+"<span class='info'>"+langFilter(obj[i].details.rtype)+"</span></div>");
+$(ins).append("<table id='it"+i.toString()+"' style='display:none' class='table tdata-features '></table>");
+  y = 0;
+  for (var k in obj[i].details)
+  {
+    if (y > 3)
+    {
+    $("#it"+i.toString()).append("<tr><td>"+langFilter(k)+"</td><td>"+langFilter(obj[i].details[k])+"</td></tr>");
+      };
+    y = y+ 1
+  };
+$(ins).append("<a href='#' style='display:none' onclick='reserveFunction(\""+i+"\");' class='reserve-button'><span class='glyphicon glyphicon-calendar'></span>"+langFilter("{reserve_button}")+"</a>");
+
+
+
+
+}
+
+
+
+$('.carousel').on('slid.bs.carousel', function () {
+var cid = $(this).attr("id");
+var img= $("div#"+cid+" > div.carousel-inner > div.active > img.img-responsive");
+if (img.hasAttr("data-src")){
+  img.attr("src",img.attr("data-src"));
+  img.removeAttr("data-src");
+  
+}
+ 
+});
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 function weatherLL(){
 var w = document.getElementById("weathCAN");
 var ctx = w.getContext('2d');
@@ -210,17 +309,21 @@ img.src = 'https://shareimg.gq/weather';
 
 
 }
+
+
+
+
+
+
+
 $(document).ready(function()
 {
   
   setFirstData();
   Translate();
-
-  $("#Dcars").change(function ()
-  {
-    changeTC(this.value);
-
-  });
+  var conn = new WebSocket('ws://localhost:8088');
+  conn.onmessage = function(e){ alert(e.data); };
+  conn.onopen = () => conn.send('hello');
   
 offpreloader(0);
   

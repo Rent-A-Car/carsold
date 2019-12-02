@@ -69,12 +69,27 @@ padding-top:0.6em;
 
 }
 
-.cnet.fa-viber {color:purple;}
-.cnet.fa-whatsapp {color:green;}
-.cnet {text-decoration:none;}
-.cnet:hover{text-decoration: none;}
-.cnet:visited {text-decoration: none;}
-.cnet:active{text-decoration: none;}
+.cnet.fa-viber {
+color:purple;
+}
+.cnet.fa-whatsapp {
+color:green;
+}
+.cnet {
+text-decoration:none;
+}
+.cnet:hover{
+text-decoration: none;
+}
+.cnet:visited {
+text-decoration: none;
+}
+.cnet:active{
+text-decoration: none;
+}
+
+
+
 
 
 
@@ -87,52 +102,41 @@ align-items:center;
 align-content:center;
 }
 
+
+
 /*//*/
-.wrapPage {
-display:flex;
-}
 .main {
-flex-grow:0;
-max-width:85%;
 display:block;
 padding-top:0.6em;
 padding-left:1em;
-display:flex;
-flex-wrap: wrap; 
-justify-content:space-between;
-
-
+min-width:85%;
+//min-height:50em;
+float:left;
 
 }
 .infotab{
 display:block;
-flex-grow:1;
+//background-color: lightslategrey;/*lightskyblue;*/
 background-color:rgba(220, 220, 220, 1);
 text-align:center;
 overflow: hidden;
-width:15%;
+width:auto;
+min-width:15%;
 max-width:15%;
-align-self:flex-start;
+float:left;
 }
-.kurss{margin-top:1em;}
-.YanW{margin-top:0.3em;}
-
-
-.Citem{
-max-width:250px;
-margin:1.4em;
+.kurss{
+margin-top:1em;
 }
-.Citem .itmimg img {width:100%;}
-
-
-.name {
-display:block;
-text-align:center;
-width:100%;
-background-color: rgba(248,223,151);
-
-
+.YanW{
+margin-top:0.3em;
 }
+
+.item{
+max-width:200px;
+}
+.item .itmimg img {width:200px;}
+
 .tdata-price {
   background-color: rgba(248,223,151);
   height: 53px;
@@ -141,28 +145,13 @@ background-color: rgba(248,223,151);
   font-size: 24px;
   font-weight: 900;
 }
-.tdata-price .info {font-weight: normal;font-size: 18px;}
+.tdata-price .info {
 
-
-.table {
-  border-collapse: collapse;
-  width: 100%;
- 
-
-}
-
-
- td {
-  padding: 8px;
-  padding-bottom:0px;
-  text-align: left;
-  /*border-top: 1px solid #DDDDDD; */
-  border:3px solid #DDDDDD;
-  border-top: 2px solid #DDDDDD;
-  border-bottom: 2px solid #DDDDDD;
-  font-weight: normal; 
+  font-weight: normal;
   font-size: 18px;
 }
+
+
 
 
 
@@ -185,7 +174,7 @@ background-color: rgba(248,223,151);
  margin-bottom: 15px;
 }
  .hcontainer{
- width:100%;
+ width 100%;
  text-align: center;
 }
 .hcontainer h1{

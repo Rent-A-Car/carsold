@@ -4,12 +4,16 @@ background-color: #f0f0f0;
 
 }
 
+.cnet.fa-viber {color:purple;}
+.cnet.fa-whatsapp {color:green;}
+.cnet {text-decoration:none;}
+.cnet:hover{text-decoration: none;}
+.cnet:visited {text-decoration: none;}
+.cnet:active{text-decoration: none;}
 
 
 .cnet {
-    
-    width:42px;
-    height:42px;
+    font-size:20px;
     border:0;
     margin-right: 10px;
     margin-left: 10px;

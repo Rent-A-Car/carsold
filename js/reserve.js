@@ -78,13 +78,13 @@ function sendTG_N(data,status){
   
   //
   
-  Swal.fire({
+Swal.fire({
 title: langFilter('{thank}'),
 type: 'success',
 html: langFilter("{msg_success}"),
-   footer: '<a href="viber://chat/?number=38268555972"><img class="cnet" src="img/viber.svg" alt="Viber"></a><a href="https://www.facebook.com/montenegroarenda/"><img class="cnet" src="img/facebook.svg" alt="Facebook"></a><a href="whatsapp://send/?phone=38268555972"><img src="img/whatsapp.svg" alt="Whatsapp" class="cnet"></a>'
+ footer: '<a class="cnet fab fa-viber" href="viber://chat/?number=38268555972"></a><a class="cnet fab fa-facebook" href="https://www.facebook.com/montenegroarenda/"></a><a class="cnet fab fa-whatsapp" href="whatsapp://send/?phone=38268555972"></a>'
 })
-  
+
   
   //
   
@@ -167,6 +167,8 @@ $(document).ready(function ()
  Translate();
  
   offpreloader(0);
+  
+
   
 });
 

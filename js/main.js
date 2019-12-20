@@ -324,10 +324,11 @@ $(document).ready(function()
   
   setFirstData();
   Translate();
+  /*
   var conn = new WebSocket('ws://localhost:8088');
   conn.onmessage = function(e){ alert(e.data); };
   conn.onopen = () => conn.send('hello');
-  
+  */
 offpreloader(0);
   
 }); 

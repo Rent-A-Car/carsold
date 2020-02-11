@@ -324,11 +324,11 @@ $(document).ready(function()
   
   setFirstData();
   Translate();
-  /*
-  var conn = new WebSocket('ws://localhost:8088');
+  
+  var conn = new WebSocket('wss://connect.websocket.in/v2/1?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjQwMDBkZDFjMmU4YmUwZDIzZjY4MzExZmJiMmM5NWI5N2Q3MmEzOTY2ZDg2MDYzNzc1YjQ5YTFlNTA3YjNmNjI3N2JmYTcxNGNlZDUzOTZlIn0.eyJhdWQiOiI2IiwianRpIjoiNDAwMGRkMWMyZThiZTBkMjNmNjgzMTFmYmIyYzk1Yjk3ZDcyYTM5NjZkODYwNjM3NzViNDlhMWU1MDdiM2Y2Mjc3YmZhNzE0Y2VkNTM5NmUiLCJpYXQiOjE1NzcwMTUzMTgsIm5iZiI6MTU3NzAxNTMxOCwiZXhwIjoxNjA4NjM3NzE4LCJzdWIiOiIxOTkiLCJzY29wZXMiOltdfQ.O53-oWXVjJslOPdRH0AkO4bYmeRpUkhSjOaEkIWXTgvjIklJa7TIOYr-TibiEVy1qAsGTJGffQP_vCzN3tVhhHBHw73hJRT85uQbD1H9Fmn1aJT5nju3fxV6wdIGMvNdbFGcVkPwo62kvVY-IZo-LffkQTarpTF4Js5R-TExICmakTpkDEOyTavFi9lmJocWw_v7hT00iWzxtxQEPM2p6vkttVkQ84TQ6ongXQVklliN3sRCgtyKApCoLcUmbMCY45PHd4zpVT_EDxD13c_rqY8FGqtk6khURzo8sNyHLCCPp1Juasr3XkZ8aqeF4K0Ue1Xw-qgSOn-kLXlzurir6MBfe94HpaVV41Dv9KhWfHjuynuhryf3KdJY8pnD42W5S_zbVzgsBNeui2YiOYvrMdCXpYGTSjVJplrhgERkDZnV6OBHDVy9Fd9bgjZuq9OxI7cRpDqHpIpTtkoCDh89EyAVgRLzn-SVyHr334aLgXTRvtajp5lHfWCP2Bjx_IkGEa8Gom2Sv_gHNnl8UHDMskGqDVQvRVZH7HYCX0nqxDjonwO0kmZw-rGYsYmEo6lCdqR4oBm1BLqI8zy_Xamr18_wcgyTgbXaXKhtXXaBKxNNQsYAqkA8koBHGnW_fLjCM-uHQuLxklkBOQlEK0I8rB-plA4Os2zornJYB_7ehOE');
   conn.onmessage = function(e){ alert(e.data); };
   conn.onopen = () => conn.send('hello');
-  */
+  
 offpreloader(0);
   
 }); 
